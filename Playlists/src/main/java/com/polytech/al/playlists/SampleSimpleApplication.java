@@ -14,8 +14,12 @@
  * limitations under the License.
  */
 
-package com.polytech.al.playlists.simple;
+package com.polytech.al.playlists;
 
+import com.polytech.al.playlists.data.Playlist;
+import com.polytech.al.playlists.data.Zone;
+import com.polytech.al.playlists.repositories.PlaylistRepository;
+import com.polytech.al.playlists.repositories.ZoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +27,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.polytech.al.playlists.simple.service.HelloWorldService;
+import com.polytech.al.playlists.service.HelloWorldService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 @EnableAutoConfiguration
@@ -36,13 +43,30 @@ public class SampleSimpleApplication implements CommandLineRunner {
 
 	@Autowired
 	private HelloWorldService helloWorldService;
+	@Autowired
+	private ZoneRepository zoneRepository;
+	@Autowired
+	private PlaylistRepository playlistRepository;
 
 	@Override
 	public void run(String... args) {
-		System.out.println(this.helloWorldService.getHelloMessage());
+		zoneRepository.deleteAll();
+		playlistRepository.deleteAll();
+		List<String> songs = new ArrayList<String>();
+        songs.add("Barbiegirl.mp3");
+        songs.add("Ma gueule.mp3");
+		Playlist p = new Playlist("3",songs);
+		List<Playlist> playlists = new ArrayList<Playlist>();
+		playlists.add(p);
+		Zone z = new Zone("0","Marrackech",3.0f,3.0f,p);
+		//p.setZone(z);
+		playlistRepository.save(p);
+		zoneRepository.save(z);
+
 	}
 
 	public static void main(String[] args) throws Exception {
+
 		SpringApplication.run(SampleSimpleApplication.class, args);
 	}
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.polytech.al.playlists.simple.service;
+package com.polytech.al.playlists.service;
 
 
 import org.springframework.web.bind.annotation.RestController;

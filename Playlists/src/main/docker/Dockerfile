@@ -4,4 +4,4 @@ ENV ARTIFACTID Playlists
 ENV VERSION 1.0-SNAPSHOT
 ADD tmp/$ARTIFACTID-$VERSION.jar app.jar
 RUN sh -c 'touch /app.jar'
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://mongodb/playlists","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
