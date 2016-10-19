@@ -1,0 +1,9 @@
+.idea
+*.jar
+*.iml
+
+manifest.yml
+MANIFEST.MF
+settings.xml
+*/target
+*~
