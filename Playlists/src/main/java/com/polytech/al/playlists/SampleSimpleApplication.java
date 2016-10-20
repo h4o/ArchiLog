@@ -27,11 +27,14 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import com.polytech.al.playlists.service.HelloWorldService;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@EnableDiscoveryClient
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan

@@ -9,7 +9,8 @@ services:
       - discovery:eureka
   discovery:
     build: ./eureka-service/src/main/docker/
-
+    ports:
+      - "8761:8761"
   mongodb:
     image: mongo
     ports:
