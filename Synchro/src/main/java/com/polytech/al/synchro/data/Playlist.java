@@ -1,17 +1,13 @@
-package com.polytech.al.playlists.data;
+package com.polytech.al.synchro.data;
 
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 /**
  * Created by user on 19/10/16.
  */
-@Document
 public class Playlist {
-    @Id
+
     private String id;
 
     private List<String> songs;

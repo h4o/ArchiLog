@@ -11,6 +11,7 @@
     <modules>
         <module>Playlists</module>
         <module>eureka-service</module>
+        <module>Synchro</module>
     </modules>
 
 </project>
