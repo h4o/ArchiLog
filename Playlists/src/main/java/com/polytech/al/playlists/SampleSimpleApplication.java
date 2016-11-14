@@ -17,6 +17,7 @@
 package com.polytech.al.playlists;
 
 import com.polytech.al.playlists.data.Playlist;
+import com.polytech.al.playlists.data.Song;
 import com.polytech.al.playlists.data.Zone;
 import com.polytech.al.playlists.repositories.PlaylistRepository;
 import com.polytech.al.playlists.repositories.ZoneRepository;
@@ -55,9 +56,9 @@ public class SampleSimpleApplication implements CommandLineRunner {
 	public void run(String... args) {
 		zoneRepository.deleteAll();
 		playlistRepository.deleteAll();
-		List<String> songs = new ArrayList<String>();
-        songs.add("Barbiegirl.mp3");
-        songs.add("Ma gueule.mp3");
+		List<Song> songs = new ArrayList<Song>();
+        songs.add(new Song("Barbiegirl.mp3",120));
+        songs.add(new Song("Ma gueule.mp3",180));
 		Playlist p = new Playlist("3",songs);
 		List<Playlist> playlists = new ArrayList<Playlist>();
 		playlists.add(p);

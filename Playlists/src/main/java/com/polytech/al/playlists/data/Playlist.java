@@ -14,20 +14,20 @@ public class Playlist {
     @Id
     private String id;
 
-    private List<String> songs;
+    private List<Song> songs;
 
 
-    public Playlist(String id, List<String> songs){
+    public Playlist(String id, List<Song> songs){
         this.id = id;
         this.songs = songs;
     }
 
 
-    public List<String> getSongs() {
+    public List<Song> getSongs() {
         return songs;
     }
 
-    public void setSongs(List<String> songs) {
+    public void setSongs(List<Song> songs) {
         this.songs = songs;
     }
 
