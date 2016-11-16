@@ -14,27 +14,22 @@
  * limitations under the License.
  */
 
-package com.polytech.al.playlists;
+package com.polytech.al.synchro;
 
-import com.polytech.al.playlists.data.Playlist;
-import com.polytech.al.playlists.data.Song;
-import com.polytech.al.playlists.data.Zone;
-import com.polytech.al.playlists.repositories.PlaylistRepository;
-import com.polytech.al.playlists.repositories.ZoneRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import com.polytech.al.playlists.service.HelloWorldService;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
+@EnableFeignClients
 @EnableDiscoveryClient
 @Configuration
 @EnableAutoConfiguration
@@ -45,27 +40,10 @@ public class SampleSimpleApplication implements CommandLineRunner {
 	// injected bean service. Also demonstrates how you can use @Value to inject
 	// command line args ('--name=whatever') or application properties
 
-	@Autowired
-	private HelloWorldService helloWorldService;
-	@Autowired
-	private ZoneRepository zoneRepository;
-	@Autowired
-	private PlaylistRepository playlistRepository;
+
 
 	@Override
 	public void run(String... args) {
-		zoneRepository.deleteAll();
-		playlistRepository.deleteAll();
-		List<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("Barbiegirl.mp3",120));
-        songs.add(new Song("Ma gueule.mp3",180));
-		Playlist p = new Playlist("3",songs);
-		List<Playlist> playlists = new ArrayList<Playlist>();
-		playlists.add(p);
-		Zone z = new Zone("0","Marrackech",3.0f,3.0f,p);
-		//p.setZone(z);
-		playlistRepository.save(p);
-		zoneRepository.save(z);
 
 	}
 

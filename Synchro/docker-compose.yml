@@ -1,0 +1,16 @@
+version: "2.0"
+services:
+  playlists:
+    build: ./Playlists/src/main/docker/
+    ports:
+      - "8080:8080"
+    links:
+      - mongodb:db
+      - discovery:eureka
+  discovery:
+    build: ./eureka-service/src/main/docker/
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017"

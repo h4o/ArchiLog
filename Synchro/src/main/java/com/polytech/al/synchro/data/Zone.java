@@ -1,4 +1,4 @@
-package com.polytech.al.playlists.data;
+package com.polytech.al.synchro.data;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -7,14 +7,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Created by user on 19/10/16.
  */
-@Document
 public class Zone {
-    @Id
+
     private String id;
     private String name;
     private float longitute;
     private float latitude;
-    @DBRef(lazy = true)
     private Playlist playlists;
 
 

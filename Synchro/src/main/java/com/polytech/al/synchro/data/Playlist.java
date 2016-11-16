@@ -1,27 +1,28 @@
-package com.polytech.al.playlists.data;
+package com.polytech.al.synchro.data;
 
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 /**
  * Created by user on 19/10/16.
  */
-@Document
 public class Playlist {
-    @Id
+
     private String id;
 
     private List<Song> songs;
 
 
+    private long length;
+
     public Playlist(String id, List<Song> songs){
         this.id = id;
         this.songs = songs;
+        computeLength();
     }
+    public Playlist(){
 
+    }
 
     public List<Song> getSongs() {
         return songs;
@@ -29,6 +30,14 @@ public class Playlist {
 
     public void setSongs(List<Song> songs) {
         this.songs = songs;
+        computeLength();
+    }
+
+    private void computeLength(){
+        length = 0;
+        for(Song s: songs){
+            length += s.getLength();
+        }
     }
 
     public String getId() {
@@ -39,4 +48,10 @@ public class Playlist {
         this.id = id;
     }
 
+
+    public long getLength(){
+        if(length == 0 && songs.size() != 0)
+            computeLength();
+        return length;
+    }
 }
