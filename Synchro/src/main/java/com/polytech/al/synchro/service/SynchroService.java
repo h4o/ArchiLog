@@ -32,9 +32,9 @@ public class SynchroService {
         c.set(Calendar.SECOND, 0);
         c.set(Calendar.MILLISECOND, 0);
         long passed = now - c.getTimeInMillis();
-        long secondsPassed = passed / 1000;
-        long length = p.getLength();
-        long remaining = secondsPassed % length;
+        float secondsPassed = passed;
+        long length = p.getLength()*1000;
+        float remaining = (secondsPassed % length)/1000;
         int position = 0;
         for(int i = 0; i < p.getSongs().size(); i++){
             if(remaining < p.getSongs().get(i).getLength()){

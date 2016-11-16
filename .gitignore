@@ -7,3 +7,5 @@ MANIFEST.MF
 settings.xml
 */target
 *~
+*.mp3
+streamer/node_modules/*

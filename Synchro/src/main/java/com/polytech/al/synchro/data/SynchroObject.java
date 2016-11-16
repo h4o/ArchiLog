@@ -5,9 +5,9 @@ package com.polytech.al.synchro.data;
  */
 public class SynchroObject {
     private int position;
-    private Long time;
+    private float time;
 
-    public SynchroObject( Long time,int position) {
+    public SynchroObject( float time,int position) {
 
         this.time = time;
         this.position = position;
@@ -17,11 +17,11 @@ public class SynchroObject {
 
     }
 
-    public Long getTime() {
+    public float getTime() {
         return time;
     }
 
-    public void setTime(Long time) {
+    public void setTime(Float time) {
         this.time = time;
     }
 
