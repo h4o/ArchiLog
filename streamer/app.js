@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var http = require('http'),
     fileSystem = require('fs'),
     path = require('path');
@@ -30,16 +31,26 @@ const client = new Eureka({
   },
 });
 
-client.start();
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 
-http.createServer(function(req, response) {
-	var musics = ["music.mp3","music1.mp3"]
-	var position = 0;
-	var time = 0;
+var routes = require('./routes/index');
+var streamer = require('./routes/streamer');
 
-	info = extractPort('Playlists');
-	console.log(info);
+var app = express();
+app.use(function(request, response, next) {
+  response.header("Access-Control-Allow-Origin", "*");
+  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
+var env = process.env.NODE_ENV || 'development';
+app.locals.ENV = env;
+app.locals.ENV_DEVELOPMENT = env == 'development';
 
 	info = extractPort('Synchro');
     request.post(
@@ -55,27 +66,55 @@ http.createServer(function(req, response) {
             	    var filePath = path.join(__dirname, musics[position]);
 				    var stat = fileSystem.statSync(filePath);
 
-				    response.writeHead(200, {
-				        'Content-Type': 'audio/mpeg'
-				    });
-				    console.log("Advance the file by "+128*256*time + " ( "+time+" ) ##timestamp: "+Math.floor(Date.now() / 1000))
-				    var readStream = fileSystem.createReadStream(filePath,{start: Math.floor(16*1000*time)});
-				    // We replaced all the event handlers with a simple call to readStream.pipe()
-				    readStream.pipe(response);
 
-				
-        }
-    }
-	);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
+// app.use(favicon(__dirname + '/public/img/favicon.ico'));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-})
-.listen(3000);
+app.use('/', routes);
+app.use('/streamer', streamer);
 
+/// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
 
-function extractPort(ServiceName){
-	const appInfo = client.getInstancesByAppId(ServiceName);
-	//console.log(appInfo)
-	return {  port:appInfo[0].port['$'], ip:appInfo[0].ipAddr }
+/// error handlers
 
+// development error handler
+// will print stacktrace
+
+if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err,
+            title: 'error'
+        });
+    });
 }
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {},
+        title: 'error'
+    });
+});
+
+
+module.exports = app;
