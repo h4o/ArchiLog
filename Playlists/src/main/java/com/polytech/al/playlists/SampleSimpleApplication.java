@@ -57,13 +57,21 @@ public class SampleSimpleApplication implements CommandLineRunner {
 		zoneRepository.deleteAll();
 		playlistRepository.deleteAll();
 		List<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("Barbiegirl.mp3",120));
-        songs.add(new Song("Ma gueule.mp3",180));
+        songs.add(new Song("Music1.mp3",348));
+        songs.add(new Song("Music.mp3",203));
 		Playlist p = new Playlist("3",songs);
 		List<Playlist> playlists = new ArrayList<Playlist>();
 		playlists.add(p);
 		Zone z = new Zone("0","Marrackech",3.0f,3.0f,p);
 		//p.setZone(z);
+		playlistRepository.save(p);
+		zoneRepository.save(z);
+
+		songs.clear();
+		songs.add(new Song("Music3.mp3",248));
+		songs.add(new Song("Music4.mp3",254));
+		p = new Playlist("4",songs);
+		z = new Zone("1","Truc",4,4,p);
 		playlistRepository.save(p);
 		zoneRepository.save(z);
 

@@ -4,7 +4,11 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
+      statusPageUrl: https://al-zones.herokuapp.com/info
+      healthCheckUrl: https://al-zones.herokuapp.com/health
+      homePageUrl: https://al-zones.herokuapp.com/
+      hostname: al-zones.herokuapp.com
+      non-secure-port: 80
   client:
     serviceUrl:
-      defaultZone: http://eureka:8761/eureka/
+      defaultZone: http://al-discovery.herokuapp.com/eureka/
