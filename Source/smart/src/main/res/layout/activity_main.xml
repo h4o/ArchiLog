@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
 
 	<TextView
 		android:id="@+id/textView3"
@@ -14,6 +14,56 @@
 		android:text="Playing Music "
 		android:textSize="20dp" />
 
+
+	<CheckBox
+		android:id="@+id/zone1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textView3"
+		android:text="zone 1 " />
+	<CheckBox
+		android:id="@+id/zone2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/zone1"
+		android:text="zone 2" />
+	<Button
+		android:id="@+id/play"
+		android:layout_width="80dp"
+		android:layout_height="50dp"
+		android:layout_margin="10dip"
+		android:text="Play"
+		android:layout_below="@id/zone2"
+		/>
+	<Button
+		android:id="@+id/stop"
+		android:layout_width="80dp"
+		android:layout_height="50dp"
+		android:layout_alignTop="@+id/play"
+		android:layout_toRightOf="@+id/play"
+		android:layout_toEndOf="@+id/play"
+		android:text="Stop"
+		android:layout_below="@id/zone2"
+		/>
+	<SeekBar
+		android:id="@+id/seekBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dip"
+		android:layout_gravity="center_horizontal"
+		android:layout_below="@id/stop"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="time"
+
+		android:id="@+id/textView2"
+		android:layout_below="@+id/seekBar"
+		/>
+
+
 	<TextView android:text="Latitude"
 		android:layout_marginTop="30dp"
 		android:id="@+id/TextView01"
@@ -22,8 +72,8 @@
 
 		android:layout_marginLeft="10dip"
 
-		android:layout_below="@id/textView3"
-		 />
+		android:layout_below="@id/seekBar"
+		/>
 	<EditText android:text="0.0"
 		android:id="@+id/latitude"
 		android:layout_height="wrap_content"
@@ -48,150 +98,7 @@
 		android:layout_alignTop="@+id/TextView02"
 		android:layout_toRightOf="@+id/TextView02"
 		android:layout_toEndOf="@+id/TextView02" />
-	<Button
-		android:id="@+id/button1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="getMusic"
-		android:layout_gravity="center_horizontal"
-		android:onClick="envoyerLong"
-		android:layout_below="@+id/longitude"
-		android:layout_toRightOf="@+id/longitude"
-		android:layout_toEndOf="@+id/longitude" />
-	<Button
-		android:id="@+id/play"
-		android:layout_width="80dp"
-		android:layout_height="50dp"
-		android:layout_margin="10dip"
-		android:text="Play"
-		android:layout_below="@id/button1"
-		/>
-	<Button
-		android:id="@+id/stop"
-		android:layout_width="80dp"
-		android:layout_height="50dp"
-		android:layout_alignTop="@+id/play"
-		android:layout_toRightOf="@+id/play"
-		android:layout_toEndOf="@+id/play"
-		android:text="Stop"
-	/>
-	<SeekBar
-		android:id="@+id/seekBar"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_margin="10dip"
-		android:layout_gravity="center_horizontal"
-		android:layout_below="@id/stop"/>
 
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:text="time"
-
-		android:id="@+id/textView2"
-		android:layout_below="@+id/seekBar"
-		/>
-
-	<!-- <TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:text="Small Text"
-		android:id="@+id/textView6"
-		android:layout_below="@id/TextView02"
-		 />
--->
-
-
-
-	<!--
-        <EditText android:text="0.0"
-            android:id="@+id/latitude"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dip"
-            android:layout_width="150dip"
-            android:layout_below ="@id/TextView01"
-            />
-
-
-        <TextView android:text="Longitude"
-            android:id="@+id/TextView02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/latitude"
-            android:layout_marginLeft="10dip" />
-
-        <EditText android:text="0.0"
-            android:id="@+id/longitude"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dip"
-            android:layout_width="150dip"
-            android:layout_toRightOf="@id/textView2"
-             />
-
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="getMusic"
-            android:layout_gravity="center_horizontal"
-            android:onClick="envoyerLong"
-            android:layout_below="@id/TextView02"/>
-
-
-
-
-
-
-        <Button
-            android:id="@+id/play"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-            android:text="Play"
-            android:layout_below="@id/button1"/>
-
-        <Button
-            android:id="@+id/stop"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-            android:text="Stop"
-            android:layout_below="@id/play"/>
-        &lt;!&ndash; <Button
-            android:id="@+id/syncro"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-            android:text="Syncro" />  &ndash;&gt;
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/textView6"
-            android:layout_above="@+id/seekBar"
-            android:layout_gravity="right" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/textView2"
-            android:layout_above="@+id/seekBar"
-             />
-
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-
-            android:layout_gravity="center_horizontal" />-->
 
 
 </RelativeLayout>
