@@ -23,12 +23,12 @@ public class ZonesSeviceImpl implements ZonesService {
 
     @RequestMapping("/zones")
     public String getZone(@RequestParam(value="latitude") float latitude, @RequestParam(value="longitude")float longitude) {
-        return zoneFinder.findByCoordinates(latitude,longitude).getId().toString();
+        return zoneFinder.findByCoordinates(latitude, longitude).getId();
     }
 
     @RequestMapping("/zonesMango")
     public String getZoneMango(@RequestParam(value="latitude") float latitude, @RequestParam(value="longitude")float longitude) {
-        return zoneFinder.findByCoordinates(latitude,longitude).getId().toString();
+        return zoneFinder.findByCoordinates(latitude, longitude).getId();
     }
 
 
