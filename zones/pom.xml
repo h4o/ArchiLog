@@ -48,7 +48,6 @@
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
 
-<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -56,8 +55,7 @@
 			<version>4.11</version>
 		</dependency>
 
-=======
->>>>>>> d2e3b019b5031f71239e1cecaa5e8f1b26a924a4
+
 
 	</dependencies>
     

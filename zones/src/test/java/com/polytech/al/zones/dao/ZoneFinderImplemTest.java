@@ -19,9 +19,9 @@ public class ZoneFinderImplemTest {
     @Test
     public void findByCoordinatesTest(){
         String zoneId = zoneFinderImplem.findByCoordinates(1232434,34343434).getId();
-        assertEquals(zoneId,"123456789");
+        assertEquals(zoneId,"0");
          zoneId = zoneFinderImplem.findByCoordinates(2332434,34343434).getId();
-        assertEquals(zoneId,"987654321");
+        assertEquals(zoneId,"1");
 
 
 
