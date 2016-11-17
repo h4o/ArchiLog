@@ -24,8 +24,8 @@ const client = new Eureka({
     },
   },
   eureka: {
-    host: 'localhost',
-    port: 8761,
+    host: 'al-discovery.herokuapp.com',
+    port: 80,
     servicePath: '/eureka/apps/',
   },
 });
@@ -43,7 +43,7 @@ http.createServer(function(req, response) {
 
 	info = extractPort('Synchro');
     request.post(
-    'http://localhost:8090/synchro/',
+    'http://al-synchro.herokuapp.com/synchro/',
     { json: {id:"3",songs:[{id:"Barbiegirl.mp3",length:237},{id:"Ma gueule.mp3",length:348}]} },
     function (error, resp, body) {
         if (!error && resp.statusCode == 200) {
