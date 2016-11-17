@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var http = require('http'),
     fileSystem = require('fs'),
     path = require('path');
@@ -7,30 +6,6 @@ var http = require('http'),
 const Eureka = require('eureka-js-client').Eureka;
 var request = require('request');
 // example configuration 
-const client = new Eureka({
-  instance: {
-    app: 'Streamer',
-    hostName: 'localhost',
-    ipAddr: '127.0.0.1',
-    statusPageUrl: 'http://localhost:3000',
-    healthCheckUrl: 'http://localhost:3000/health',
-    port: {
-      '$': 3000,
-      '@enabled': true,
-    },
-    vipAddress: 'Streamer',
-    dataCenterInfo: {
-      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
-      name: 'MyOwn',
-    },
-  },
-  eureka: {
-    host: 'al-discovery.herokuapp.com',
-    port: 80,
-    servicePath: '/eureka/apps/',
-  },
-});
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -51,21 +26,6 @@ app.use(function(request, response, next) {
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'development';
-
-	info = extractPort('Synchro');
-    request.post(
-    'http://al-synchro.herokuapp.com/synchro/',
-    { json: {id:"3",songs:[{id:"Barbiegirl.mp3",length:237},{id:"Ma gueule.mp3",length:348}]} },
-    function (error, resp, body) {
-        if (!error && resp.statusCode == 200) {
-            	position = body.position
-            	time = body.time
-        		
-        			if(position >= musics.length)
-        				position = 0;
-            	    var filePath = path.join(__dirname, musics[position]);
-				    var stat = fileSystem.statSync(filePath);
-
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

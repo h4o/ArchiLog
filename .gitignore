@@ -9,3 +9,4 @@ settings.xml
 *~
 *.mp3
 streamer/node_modules/*
+.gradle/

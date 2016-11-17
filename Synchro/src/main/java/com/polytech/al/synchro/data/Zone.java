@@ -1,8 +1,5 @@
 package com.polytech.al.synchro.data;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by user on 19/10/16.

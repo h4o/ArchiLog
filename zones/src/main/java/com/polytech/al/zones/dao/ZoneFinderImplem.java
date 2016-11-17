@@ -11,8 +11,8 @@ public class ZoneFinderImplem implements IZoneFinder {
     public Zone findByCoordinates(float latitude, float longitude) {
         // mocking the database access
         if(String.valueOf(latitude).startsWith("1"))
-            return new Zone("123456789");
-        return new Zone("987654321");
+            return new Zone("0");
+        return new Zone("1");
     }
 
 
