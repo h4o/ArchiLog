@@ -1,12 +1,17 @@
 package com.polytech.al.zones.data;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.UUID;
 
 /**
  * Created by hraf on 02/11/16.
  */
-public class Zone {
 
+@Document
+public class Zone {
+    @Id
     private String id ;
 
     public Zone() {
@@ -21,5 +26,13 @@ public class Zone {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Zone{" +
+                "id='" + id + '\'' +
+                '}';
     }
 }
