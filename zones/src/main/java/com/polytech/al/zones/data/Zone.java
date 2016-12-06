@@ -1,5 +1,6 @@
 package com.polytech.al.zones.data;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,7 +14,9 @@ import java.util.UUID;
 @Document
 public class Zone implements Serializable {
     private String id ;
-    @Id private Coordinates coordinates;
+    @Id
+    @JsonProperty
+    private Coordinates coordinates;
 
 
 
@@ -56,9 +59,9 @@ public class Zone implements Serializable {
     public String toString() {
         return "Zone{" +
                 "id='" + id + '\'' +
+                ", coordinates=" + coordinates +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object o) {

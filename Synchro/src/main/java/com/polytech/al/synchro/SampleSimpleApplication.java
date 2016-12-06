@@ -28,7 +28,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
-
+//sudo docker-compose up
+//sudo docker-compose build --no-cache
 @EnableFeignClients
 @EnableDiscoveryClient
 @Configuration

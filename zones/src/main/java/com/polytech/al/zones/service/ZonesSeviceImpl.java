@@ -28,15 +28,21 @@ public class ZonesSeviceImpl implements ZonesService {
 
     @RequestMapping("/zonesMango")
     public String getZoneMango(@RequestParam(value="latitude") float latitude, @RequestParam(value="longitude")float longitude) {
-        return zoneFinder.findByCoordinates(latitude, longitude).getId();
+        String s  ="";
+        for(Zone z : zoneFinderMongo.findAll()){
+            s += z.toString() + "######\n";
+        }
+     return s;
+//        return zoneFinder.findByCoordinates(latitude, longitude).getId();
     }
 
 
 
-//    @PostMapping("/zonesMango")
-    @RequestMapping(method= RequestMethod.POST, name="/zonesMango")
+    @PostMapping("/zonesMango")
+//    @RequestMapping(method= RequestMethod.POST, name="/zonesMango")
     public String addZoneMango(@RequestBody Zone zone) {
-            return zone.toString();
+        zoneFinderMongo.save(zone);
+        return ("=================>"+zone.getCoordinates().toString());
     }
 
 
