@@ -1,11 +1,8 @@
 package com.polytech.al.zones.data;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 /**
  * Created by hraf on 02/11/16.
@@ -14,20 +11,21 @@ import java.util.UUID;
 @Document
 public class Zone implements Serializable {
     private String id ;
-    @Id
-    @JsonProperty
-    private Coordinates coordinates;
+//    @Id
+//    @JsonProperty
+    private Coordinates center;
 
 
+//43.707031, 7.192997
 
 
-    public Zone(Coordinates coordinates) {
-        this.coordinates=coordinates;
+    public Zone(Coordinates center) {
+        this.center=center;
     }
 
 
     public Zone(Coordinates coordinates,String id) {
-        this.coordinates=coordinates;
+        this.center=coordinates;
         this.id=id;
     }
 
@@ -38,12 +36,12 @@ public class Zone implements Serializable {
         this.id=id;
     }
 
-    public Coordinates getCoordinates() {
-        return coordinates;
+    public Coordinates getCenter() {
+        return center;
     }
 
-    public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
+    public void setCenter(Coordinates coordinates) {
+        this.center = coordinates;
     }
 
     public String getId() {
@@ -59,7 +57,7 @@ public class Zone implements Serializable {
     public String toString() {
         return "Zone{" +
                 "id='" + id + '\'' +
-                ", coordinates=" + coordinates +
+                ", coordinates=" + center +
                 '}';
     }
 
@@ -70,7 +68,7 @@ public class Zone implements Serializable {
 
         Zone zone = (Zone) o;
 
-        return zone.getCoordinates().equals(this.coordinates);
+        return zone.getCenter().equals(this.center);
 
     }
 
