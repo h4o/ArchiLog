@@ -14,14 +14,20 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import javax.inject.Named;
 
 /**
  * Created by Fabien VICENTE on 28/10/16.
  */
 @RestController
 public class SynchroService {
+    @Autowired PlaylistsClient playlistsClient;
 
+    @RequestMapping(name="/test/")
+    public String test(){
 
+        return "JE SUIS UN TEST<br \\>"+playlistsClient.getPlaylist("0");
+    }
 
     @RequestMapping(method=RequestMethod.POST, name="/synchro/")
     public SynchroObject getSynchro(@RequestBody Playlist p){

@@ -1,0 +1,1199 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spring Boot Simple Sample
+[INFO] eureka-service
+[INFO] Zones
+[INFO] Spring Boot Simple Sample
+[INFO] archi-AL
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spring Boot Simple Sample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ Playlists ---
+[INFO] Deleting /home/user/AL/Playlists/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Playlists ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Playlists ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /home/user/AL/Playlists/target/classes
+[WARNING] /home/user/AL/Playlists/src/main/java/com/polytech/al/playlists/util/LazyLoadingSerializationConfig.java: /home/user/AL/Playlists/src/main/java/com/polytech/al/playlists/util/LazyLoadingSerializationConfig.java uses or overrides a deprecated API.
+[WARNING] /home/user/AL/Playlists/src/main/java/com/polytech/al/playlists/util/LazyLoadingSerializationConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Playlists ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Playlists ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ Playlists ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ Playlists ---
+[INFO] Building jar: /home/user/AL/Playlists/target/Playlists-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ Playlists ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building eureka-service 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ eureka-service ---
+[INFO] Deleting /home/user/AL/eureka-service/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ eureka-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ eureka-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/user/AL/eureka-service/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ eureka-service ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ eureka-service ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ eureka-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ eureka-service ---
+[INFO] Building jar: /home/user/AL/eureka-service/target/eureka-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ eureka-service ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Zones 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ zones ---
+[INFO] Deleting /home/user/AL/zones/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ zones ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ zones ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /home/user/AL/zones/target/classes
+[WARNING] /home/user/AL/zones/src/main/java/com/polytech/al/zones/util/LazyLoadingSerializationConfig.java: /home/user/AL/zones/src/main/java/com/polytech/al/zones/util/LazyLoadingSerializationConfig.java uses or overrides a deprecated API.
+[WARNING] /home/user/AL/zones/src/main/java/com/polytech/al/zones/util/LazyLoadingSerializationConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ zones ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ zones ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ zones ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ zones ---
+[INFO] Building jar: /home/user/AL/zones/target/zones-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ zones ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spring Boot Simple Sample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ Synchro ---
+[INFO] Deleting /home/user/AL/Synchro/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Synchro ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Synchro ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to /home/user/AL/Synchro/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Synchro ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Synchro ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ Synchro ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ Synchro ---
+[INFO] Building jar: /home/user/AL/Synchro/target/Synchro-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ Synchro ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building archi-AL 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ archi-AL ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Spring Boot Simple Sample ......................... SUCCESS [5.238s]
+[INFO] eureka-service .................................... SUCCESS [0.518s]
+[INFO] Zones ............................................. SUCCESS [0.622s]
+[INFO] Spring Boot Simple Sample ......................... SUCCESS [0.668s]
+[INFO] archi-AL .......................................... SUCCESS [0.197s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.720s
+[INFO] Finished at: Sat Dec 24 15:38:40 CET 2016
+[INFO] Final Memory: 42M/333M
+[INFO] ------------------------------------------------------------------------
+Step 1 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> 7b7f938035b2
+Step 2 : VOLUME /tmp
+ ---> Running in 690f54836ad7
+ ---> 834f88e2404c
+Removing intermediate container 690f54836ad7
+Step 3 : ENV ARTIFACTID eureka-service
+ ---> Running in da5c24507230
+ ---> dcc23a38a400
+Removing intermediate container da5c24507230
+Step 4 : ENV VERSION 0.0.1-SNAPSHOT
+ ---> Running in 5ab2709d6a73
+ ---> 8056d06fbc3f
+Removing intermediate container 5ab2709d6a73
+Step 5 : ADD tmp/$ARTIFACTID-$VERSION.jar app.jar
+ ---> 7a2c7e59fbcf
+Removing intermediate container 62e232cc8903
+Step 6 : RUN sh -c 'touch /app.jar'
+ ---> Running in 9d1b3799787c
+ ---> 46e6604ceb5e
+Removing intermediate container 9d1b3799787c
+Step 7 : ENTRYPOINT java -Dspring.data.mongodb.uri=mongodb://db/playlists -Djava.security.egd=file:/dev/./urandom -Xmx32m -Xss256k -jar /app.jar
+ ---> Running in 5fb2bedf7774
+ ---> 5cd5ee4d1b66
+Removing intermediate container 5fb2bedf7774
+Step 8 : CMD java -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+ ---> Running in f2c11f2142ed
+ ---> 212571b820bc
+Removing intermediate container f2c11f2142ed
+Successfully built 212571b820bc
+Step 1 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> 7b7f938035b2
+Step 2 : VOLUME /tmp
+ ---> Running in 4988ce0943e3
+ ---> 2ad058b9d281
+Removing intermediate container 4988ce0943e3
+Step 3 : ENV ARTIFACTID Playlists
+ ---> Running in 885ec39379b7
+ ---> 776cbdf6f99e
+Removing intermediate container 885ec39379b7
+Step 4 : ENV VERSION 1.0-SNAPSHOT
+ ---> Running in 5f2285f2bdbf
+ ---> b3a38d32f728
+Removing intermediate container 5f2285f2bdbf
+Step 5 : ADD tmp/$ARTIFACTID-$VERSION.jar app.jar
+ ---> 358bbfea1c75
+Removing intermediate container d803d69f0df7
+Step 6 : RUN sh -c 'touch /app.jar'
+ ---> Running in bd8b24f7db64
+ ---> b1b522388ee5
+Removing intermediate container bd8b24f7db64
+Step 7 : ENTRYPOINT java -Dspring.data.mongodb.uri=mongodb://db/playlists -Djava.security.egd=file:/dev/./urandom -Xmx32m -Xss256k -jar /app.jar
+ ---> Running in d9ebebfca538
+ ---> 5641621bd0a7
+Removing intermediate container d9ebebfca538
+Successfully built 5641621bd0a7
+Step 1 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> 7b7f938035b2
+Step 2 : VOLUME /tmp
+ ---> Running in d2bc93553a1b
+ ---> 2a826f5e2dc7
+Removing intermediate container d2bc93553a1b
+Step 3 : ENV ARTIFACTID Synchro
+ ---> Running in 50dc6f8cbc2a
+ ---> 5277b49a9057
+Removing intermediate container 50dc6f8cbc2a
+Step 4 : ENV VERSION 1.0-SNAPSHOT
+ ---> Running in 180a27b6a2ab
+ ---> 2b25f3694780
+Removing intermediate container 180a27b6a2ab
+Step 5 : ADD tmp/$ARTIFACTID-$VERSION.jar app.jar
+ ---> 612cab6adef4
+Removing intermediate container 5590fe724e13
+Step 6 : RUN sh -c 'touch /app.jar'
+ ---> Running in 84214ff324a1
+ ---> 60f90ecf0ae4
+Removing intermediate container 84214ff324a1
+Step 7 : ENTRYPOINT java -Dspring.data.mongodb.uri=mongodb://db/playlists -Djava.security.egd=file:/dev/./urandom -Xmx128m -Xss256k -jar /app.jar
+ ---> Running in 489d640f768a
+ ---> de7376e0425d
+Removing intermediate container 489d640f768a
+Successfully built de7376e0425d
+Step 1 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> 7b7f938035b2
+Step 2 : VOLUME /tmp
+ ---> Running in fa4c15a7e19d
+ ---> d05a294db07d
+Removing intermediate container fa4c15a7e19d
+Step 3 : ENV ARTIFACTID zones
+ ---> Running in 905205421cd0
+ ---> 89d3b7ca7d5d
+Removing intermediate container 905205421cd0
+Step 4 : ENV VERSION 1.0-SNAPSHOT
+ ---> Running in 9f90c0142f28
+ ---> 084d5d264ee0
+Removing intermediate container 9f90c0142f28
+Step 5 : ADD tmp/$ARTIFACTID-$VERSION.jar app.jar
+ ---> 3ac977cd695b
+Removing intermediate container fa0a02d72c33
+Step 6 : RUN sh -c 'touch /app.jar'
+ ---> Running in abba4ec2fbb3
+ ---> aa641fcdbce4
+Removing intermediate container abba4ec2fbb3
+Step 7 : ENTRYPOINT java -Dspring.data.mongodb.uri=mongodb://db/zones -Djava.security.egd=file:/dev/./urandom -Xmx32m -Xss256k -jar /app.jar
+ ---> Running in 0a3bdb1dec00
+ ---> 9dc860826cc0
+Removing intermediate container 0a3bdb1dec00
+Successfully built 9dc860826cc0
+Attaching to al_mongodb_1, al_discovery_1, al_zones_1, al_synchro_1, al_playlists_1
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=7a1b6ab09834
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] db version v3.2.10
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] git version: 79d9b3ab5ce20f51c272b4411202710a082d0317
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t  3 May 2016
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] modules: none
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] build environment:
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten]     distmod: debian81
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten]     distarch: x86_64
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.026+0000 I CONTROL  [initandlisten] options: {}
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.042+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.042+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] 
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] 
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.370+0000 I CONTROL  [initandlisten] 
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.403+0000 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.403+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+[36mmongodb_1    |[0m 2016-12-24T14:39:20.411+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+[32mzones_1      |[0m 2016-12-24 14:39:25.267  INFO 1 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a: startup date [Sat Dec 24 14:39:25 GMT 2016]; root of context hierarchy
+[32mzones_1      |[0m 2016-12-24 14:39:26.726  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[32mzones_1      |[0m 2016-12-24 14:39:26.913  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c7d34aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[35msynchro_1    |[0m 2016-12-24 14:39:27.131  INFO 1 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a: startup date [Sat Dec 24 14:39:27 GMT 2016]; root of context hierarchy
+[33mdiscovery_1  |[0m 2016-12-24 14:39:27.450  INFO 1 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@deb6432: startup date [Sat Dec 24 14:39:27 GMT 2016]; root of context hierarchy
+[32mzones_1      |[0m 
+[32mzones_1      |[0m   .   ____          _            __ _ _
+[32mzones_1      |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[32mzones_1      |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[32mzones_1      |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[32mzones_1      |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[32mzones_1      |[0m  =========|_|==============|___/=/_/_/_/
+[32mzones_1      |[0m  :: Spring Boot ::        (v1.4.1.RELEASE)
+[32mzones_1      |[0m 
+[32mzones_1      |[0m 2016-12-24 14:39:29.037  INFO 1 --- [           main] c.p.al.zones.SampleSimpleApplication     : No active profile set, falling back to default profiles: default
+[32mzones_1      |[0m 2016-12-24 14:39:29.094  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e8dacdf: startup date [Sat Dec 24 14:39:29 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a
+[35msynchro_1    |[0m 2016-12-24 14:39:29.135  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[35msynchro_1    |[0m 2016-12-24 14:39:29.442  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c7d34aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33mdiscovery_1  |[0m 2016-12-24 14:39:29.716  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[33mdiscovery_1  |[0m 2016-12-24 14:39:29.994  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b894f39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[31mplaylists_1  |[0m 2016-12-24 14:39:30.329  INFO 1 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a: startup date [Sat Dec 24 14:39:30 GMT 2016]; root of context hierarchy
+[35msynchro_1    |[0m 
+[35msynchro_1    |[0m   .   ____          _            __ _ _
+[35msynchro_1    |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[35msynchro_1    |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[35msynchro_1    |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[35msynchro_1    |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[35msynchro_1    |[0m  =========|_|==============|___/=/_/_/_/
+[35msynchro_1    |[0m  :: Spring Boot ::        (v1.4.1.RELEASE)
+[35msynchro_1    |[0m 
+[35msynchro_1    |[0m 2016-12-24 14:39:31.306  INFO 1 --- [           main] c.p.al.synchro.SampleSimpleApplication   : No active profile set, falling back to default profiles: default
+[35msynchro_1    |[0m 2016-12-24 14:39:31.491  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a5fc7f7: startup date [Sat Dec 24 14:39:31 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a
+[33mdiscovery_1  |[0m 
+[33mdiscovery_1  |[0m   .   ____          _            __ _ _
+[33mdiscovery_1  |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[33mdiscovery_1  |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[33mdiscovery_1  |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[33mdiscovery_1  |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[33mdiscovery_1  |[0m  =========|_|==============|___/=/_/_/_/
+[33mdiscovery_1  |[0m  :: Spring Boot ::        (v1.4.1.RELEASE)
+[33mdiscovery_1  |[0m 
+[33mdiscovery_1  |[0m 2016-12-24 14:39:31.992  INFO 1 --- [           main] hello.EurekaServiceApplication           : No active profile set, falling back to default profiles: default
+[33mdiscovery_1  |[0m 2016-12-24 14:39:32.113  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@256216b3: startup date [Sat Dec 24 14:39:32 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@deb6432
+[31mplaylists_1  |[0m 2016-12-24 14:39:32.459  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[31mplaylists_1  |[0m 2016-12-24 14:39:32.738  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c7d34aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m   .   ____          _            __ _ _
+[31mplaylists_1  |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[31mplaylists_1  |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[31mplaylists_1  |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[31mplaylists_1  |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[31mplaylists_1  |[0m  =========|_|==============|___/=/_/_/_/
+[31mplaylists_1  |[0m  :: Spring Boot ::        (v1.4.1.RELEASE)
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:39:35.377  INFO 1 --- [           main] c.p.a.playlists.SampleSimpleApplication  : No active profile set, falling back to default profiles: default
+[31mplaylists_1  |[0m 2016-12-24 14:39:35.491  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a5fc7f7: startup date [Sat Dec 24 14:39:35 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a
+[35msynchro_1    |[0m 2016-12-24 14:39:37.528  WARN 1 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[32mzones_1      |[0m 2016-12-24 14:39:37.548  WARN 1 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[35msynchro_1    |[0m 2016-12-24 14:39:38.101  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b8b2bc6d-f542-3e35-a606-5f081d332de8
+[32mzones_1      |[0m 2016-12-24 14:39:38.128  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7af17574-20f8-38b9-ab7d-73522987ca09
+[35msynchro_1    |[0m 2016-12-24 14:39:38.189  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[32mzones_1      |[0m 2016-12-24 14:39:38.220  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[35msynchro_1    |[0m 2016-12-24 14:39:38.405  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c7d34aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[32mzones_1      |[0m 2016-12-24 14:39:38.733  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c7d34aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33mdiscovery_1  |[0m 2016-12-24 14:39:39.104  WARN 1 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[35msynchro_1    |[0m 2016-12-24 14:39:39.928  INFO 1 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @18804ms
+[33mdiscovery_1  |[0m 2016-12-24 14:39:40.204  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=37bd73dc-8665-3c9a-9c33-0a10c2586971
+[33mdiscovery_1  |[0m 2016-12-24 14:39:40.250  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[32mzones_1      |[0m 2016-12-24 14:39:40.294  INFO 1 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @19805ms
+[35msynchro_1    |[0m 2016-12-24 14:39:40.418  INFO 1 --- [           main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+[35msynchro_1    |[0m 2016-12-24 14:39:40.425  INFO 1 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+[33mdiscovery_1  |[0m 2016-12-24 14:39:40.579  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b894f39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[32mzones_1      |[0m 2016-12-24 14:39:40.822  INFO 1 --- [           main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+[32mzones_1      |[0m 2016-12-24 14:39:40.827  INFO 1 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+[35msynchro_1    |[0m 2016-12-24 14:39:41.139  INFO 1 --- [           main] application                              : Initializing Spring embedded WebApplicationContext
+[35msynchro_1    |[0m 2016-12-24 14:39:41.139  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9648 ms
+[32mzones_1      |[0m 2016-12-24 14:39:41.728  INFO 1 --- [           main] application                              : Initializing Spring embedded WebApplicationContext
+[32mzones_1      |[0m 2016-12-24 14:39:41.729  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12635 ms
+[35msynchro_1    |[0m 2016-12-24 14:39:42.179  INFO 1 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+[35msynchro_1    |[0m 2016-12-24 14:39:42.196  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+[35msynchro_1    |[0m 2016-12-24 14:39:42.198  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[35msynchro_1    |[0m 2016-12-24 14:39:42.200  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[35msynchro_1    |[0m 2016-12-24 14:39:42.202  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+[32mzones_1      |[0m 2016-12-24 14:39:42.624  INFO 1 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+[32mzones_1      |[0m 2016-12-24 14:39:42.638  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+[32mzones_1      |[0m 2016-12-24 14:39:42.640  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[32mzones_1      |[0m 2016-12-24 14:39:42.645  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[32mzones_1      |[0m 2016-12-24 14:39:42.648  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+[31mplaylists_1  |[0m 2016-12-24 14:39:43.003  WARN 1 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[33mdiscovery_1  |[0m 2016-12-24 14:39:43.014  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8761 (http)
+[33mdiscovery_1  |[0m 2016-12-24 14:39:43.131  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+[33mdiscovery_1  |[0m 2016-12-24 14:39:43.152  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+[31mplaylists_1  |[0m 2016-12-24 14:39:43.673  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6ee082e7-4727-313c-9a31-05640836d44d
+[31mplaylists_1  |[0m 2016-12-24 14:39:43.765  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[33mdiscovery_1  |[0m 2016-12-24 14:39:43.852  INFO 1 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+[33mdiscovery_1  |[0m 2016-12-24 14:39:43.861  INFO 1 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11747 ms
+[35msynchro_1    |[0m 2016-12-24 14:39:44.023  INFO 1 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@4b0b0854{/,file:///tmp/jetty-docbase.6608207107575253174.8080/,AVAILABLE}
+[35msynchro_1    |[0m 2016-12-24 14:39:44.025  INFO 1 --- [           main] org.eclipse.jetty.server.Server          : Started @22908ms
+[31mplaylists_1  |[0m 2016-12-24 14:39:44.157  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c7d34aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[32mzones_1      |[0m 2016-12-24 14:39:44.648  INFO 1 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@459e9125{/,file:///tmp/jetty-docbase.3071369105011990241.8080/,AVAILABLE}
+[32mzones_1      |[0m 2016-12-24 14:39:44.649  INFO 1 --- [           main] org.eclipse.jetty.server.Server          : Started @24184ms
+[35msynchro_1    |[0m 2016-12-24 14:39:44.861  INFO 1 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@67d48005: startup date [Sat Dec 24 14:39:44 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a5fc7f7
+[35msynchro_1    |[0m 2016-12-24 14:39:44.993  INFO 1 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[32mzones_1      |[0m 2016-12-24 14:39:45.555  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[db:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[31mplaylists_1  |[0m 2016-12-24 14:39:45.763  INFO 1 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @23821ms
+[36mmongodb_1    |[0m 2016-12-24T14:39:45.902+0000 I NETWORK  [initandlisten] connection accepted from 172.21.0.4:42330 #1 (1 connection now open)
+[32mzones_1      |[0m 2016-12-24 14:39:46.186  INFO 1 --- [null'}-db:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to db:27017
+[32mzones_1      |[0m 2016-12-24 14:39:46.209  INFO 1 --- [null'}-db:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=db:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 10]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=13155426}
+[31mplaylists_1  |[0m 2016-12-24 14:39:46.278  INFO 1 --- [           main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+[31mplaylists_1  |[0m 2016-12-24 14:39:46.294  INFO 1 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.3.11.v20160721
+[35msynchro_1    |[0m 2016-12-24 14:39:46.836  WARN 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'synchroService': Unsatisfied dependency expressed through field 'playlistsClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.polytech.al.synchro.clients.PlaylistsClient': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Method has too many Body parameters: public abstract java.util.List com.polytech.al.synchro.clients.PlaylistsClient.getZones(float,float)
+[35msynchro_1    |[0m 2016-12-24 14:39:46.844  INFO 1 --- [           main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@67d48005: startup date [Sat Dec 24 14:39:44 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a5fc7f7
+[35msynchro_1    |[0m 2016-12-24 14:39:46.879  INFO 1 --- [           main] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@4b0b0854{/,file:///tmp/jetty-docbase.6608207107575253174.8080/,UNAVAILABLE}
+[35msynchro_1    |[0m 2016-12-24 14:39:46.923  INFO 1 --- [           main] utoConfigurationReportLoggingInitializer : 
+[35msynchro_1    |[0m 
+[35msynchro_1    |[0m Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[35msynchro_1    |[0m 2016-12-24 14:39:47.003 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application startup failed
+[35msynchro_1    |[0m 
+[35msynchro_1    |[0m org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'synchroService': Unsatisfied dependency expressed through field 'playlistsClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.polytech.al.synchro.clients.PlaylistsClient': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Method has too many Body parameters: public abstract java.util.List com.polytech.al.synchro.clients.PlaylistsClient.getZones(float,float)
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:569) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:349) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:751) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861) ~[spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[35msynchro_1    |[0m 	at com.polytech.al.synchro.SampleSimpleApplication.main(SampleSimpleApplication.java:53) [classes!/:1.0-SNAPSHOT]
+[35msynchro_1    |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[35msynchro_1    |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[35msynchro_1    |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[35msynchro_1    |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[35msynchro_1    |[0m 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [app.jar:1.0-SNAPSHOT]
+[35msynchro_1    |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [app.jar:1.0-SNAPSHOT]
+[35msynchro_1    |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [app.jar:1.0-SNAPSHOT]
+[35msynchro_1    |[0m 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [app.jar:1.0-SNAPSHOT]
+[35msynchro_1    |[0m Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.polytech.al.synchro.clients.PlaylistsClient': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalStateException: Method has too many Body parameters: public abstract java.util.List com.polytech.al.synchro.clients.PlaylistsClient.getZones(float,float)
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1600) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1286) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1255) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1091) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1056) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:566) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	... 27 common frames omitted
+[35msynchro_1    |[0m Caused by: java.lang.IllegalStateException: Method has too many Body parameters: public abstract java.util.List com.polytech.al.synchro.clients.PlaylistsClient.getZones(float,float)
+[35msynchro_1    |[0m 	at feign.Util.checkState(Util.java:128) ~[feign-core-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at feign.Contract$BaseContract.parseAndValidateMetadata(Contract.java:114) ~[feign-core-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at org.springframework.cloud.netflix.feign.support.SpringMvcContract.parseAndValidateMetadata(SpringMvcContract.java:131) ~[spring-cloud-netflix-core-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[35msynchro_1    |[0m 	at feign.Contract$BaseContract.parseAndValidatateMetadata(Contract.java:64) ~[feign-core-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at feign.hystrix.HystrixDelegatingContract.parseAndValidatateMetadata(HystrixDelegatingContract.java:33) ~[feign-hystrix-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at feign.ReflectiveFeign$ParseHandlersByName.apply(ReflectiveFeign.java:146) ~[feign-core-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:53) ~[feign-core-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at feign.Feign$Builder.target(Feign.java:198) ~[feign-core-8.16.2.jar!/:8.16.2]
+[35msynchro_1    |[0m 	at org.springframework.cloud.netflix.feign.FeignClientFactoryBean$HystrixTargeter.target(FeignClientFactoryBean.java:233) ~[spring-cloud-netflix-core-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.cloud.netflix.feign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:156) ~[spring-cloud-netflix-core-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.cloud.netflix.feign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:177) ~[spring-cloud-netflix-core-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[35msynchro_1    |[0m 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168) ~[spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[35msynchro_1    |[0m 	... 37 common frames omitted
+[35msynchro_1    |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:39:47.055  INFO 1 --- [           main] application                              : Initializing Spring embedded WebApplicationContext
+[31mplaylists_1  |[0m 2016-12-24 14:39:47.055  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11564 ms
+[35mal_synchro_1 exited with code 1
+[0m[33mdiscovery_1  |[0m 2016-12-24 14:39:48.111  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.112  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.115  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[31mplaylists_1  |[0m 2016-12-24 14:39:48.121  INFO 1 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.121  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.123  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+[31mplaylists_1  |[0m 2016-12-24 14:39:48.125  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.130  INFO 1 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestTraceFilter' to: [/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.132  INFO 1 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'servletContainer' to urls: [/eureka/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.133  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:48.133  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+[31mplaylists_1  |[0m 2016-12-24 14:39:48.135  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[31mplaylists_1  |[0m 2016-12-24 14:39:48.135  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[31mplaylists_1  |[0m 2016-12-24 14:39:48.135  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+[31mplaylists_1  |[0m 2016-12-24 14:39:49.299  INFO 1 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@128d2484{/,file:///tmp/jetty-docbase.9196807297182573813.8080/,AVAILABLE}
+[31mplaylists_1  |[0m 2016-12-24 14:39:49.304  INFO 1 --- [           main] org.eclipse.jetty.server.Server          : Started @27386ms
+[33mdiscovery_1  |[0m 2016-12-24 14:39:49.392  INFO 1 --- [ost-startStop-1] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+[32mzones_1      |[0m 2016-12-24 14:39:50.130  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e8dacdf: startup date [Sat Dec 24 14:39:29 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a
+[32mzones_1      |[0m 2016-12-24 14:39:50.472  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zones]}" onto public java.lang.String com.polytech.al.zones.service.ZonesSeviceImpl.getZone(float,float)
+[32mzones_1      |[0m 2016-12-24 14:39:50.482  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zonesMango]}" onto public java.lang.String com.polytech.al.zones.service.ZonesSeviceImpl.getZoneMango(float,float)
+[32mzones_1      |[0m 2016-12-24 14:39:50.489  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zonesMango],methods=[POST]}" onto public java.lang.String com.polytech.al.zones.service.ZonesSeviceImpl.addZoneMango(com.polytech.al.zones.data.Zone)
+[32mzones_1      |[0m 2016-12-24 14:39:50.502  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[32mzones_1      |[0m 2016-12-24 14:39:50.509  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[31mplaylists_1  |[0m 2016-12-24 14:39:50.552  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[db:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[36mmongodb_1    |[0m 2016-12-24T14:39:50.721+0000 I NETWORK  [initandlisten] connection accepted from 172.21.0.6:33406 #2 (2 connections now open)
+[32mzones_1      |[0m 2016-12-24 14:39:50.733  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[32mzones_1      |[0m 2016-12-24 14:39:50.733  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[31mplaylists_1  |[0m 2016-12-24 14:39:50.991  INFO 1 --- [null'}-db:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to db:27017
+[31mplaylists_1  |[0m 2016-12-24 14:39:51.010  INFO 1 --- [null'}-db:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=db:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 10]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2475042}
+[32mzones_1      |[0m 2016-12-24 14:39:51.011  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[33mdiscovery_1  |[0m 2016-12-24 14:39:52.754  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.078  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a5fc7f7: startup date [Sat Dec 24 14:39:35 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@515f550a
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.690  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/services/{applicationName}/]}" onto public java.util.List<org.springframework.cloud.client.ServiceInstance> com.polytech.al.playlists.service.HelloWorldService.serviceInstancesByApplicationName(java.lang.String)
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.737  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zone/{zoneId}/playlist],methods=[GET]}" onto public com.polytech.al.playlists.data.Playlist com.polytech.al.playlists.service.ZoneService.getPlaylist(java.lang.String)
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.738  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zone],methods=[GET]}" onto public java.util.List<com.polytech.al.playlists.data.Zone> com.polytech.al.playlists.service.ZoneService.get()
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.738  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zone/{zoneId}],methods=[GET]}" onto public com.polytech.al.playlists.data.Zone com.polytech.al.playlists.service.ZoneService.get(java.lang.String)
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.757  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.757  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.917  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[31mplaylists_1  |[0m 2016-12-24 14:39:54.918  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[31mplaylists_1  |[0m 2016-12-24 14:39:55.114  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[32mzones_1      |[0m 2016-12-24 14:39:55.309  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[32mzones_1      |[0m 2016-12-24 14:39:55.309  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[32mzones_1      |[0m 2016-12-24 14:39:55.331  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[32mzones_1      |[0m 2016-12-24 14:39:55.332  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[32mzones_1      |[0m 2016-12-24 14:39:57.070  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+[32mzones_1      |[0m 2016-12-24 14:39:57.124  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+[32mzones_1      |[0m 2016-12-24 14:39:57.130  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+[32mzones_1      |[0m 2016-12-24 14:39:57.134  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[32mzones_1      |[0m 2016-12-24 14:39:57.147  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[32mzones_1      |[0m 2016-12-24 14:39:57.723  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[32mzones_1      |[0m 2016-12-24 14:39:57.793  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6e8dacdf,type=ConfigurationPropertiesRebinder]
+[31mplaylists_1  |[0m 2016-12-24 14:39:58.170  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[31mplaylists_1  |[0m 2016-12-24 14:39:58.172  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[31mplaylists_1  |[0m 2016-12-24 14:39:58.213  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[31mplaylists_1  |[0m 2016-12-24 14:39:58.213  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.361  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.409  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.410  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.420  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.432  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[32mzones_1      |[0m 2016-12-24 14:39:59.451  INFO 1 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+[32mzones_1      |[0m 2016-12-24 14:39:59.490  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.498  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[31mplaylists_1  |[0m 2016-12-24 14:39:59.567  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6a5fc7f7,type=ConfigurationPropertiesRebinder]
+[31mplaylists_1  |[0m 2016-12-24 14:40:02.019  INFO 1 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+[31mplaylists_1  |[0m 2016-12-24 14:40:02.067  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[33mdiscovery_1  |[0m 2016-12-24 14:40:02.745  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@256216b3: startup date [Sat Dec 24 14:39:32 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@deb6432
+[32mzones_1      |[0m 2016-12-24 14:40:03.036  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[32mzones_1      |[0m 2016-12-24 14:40:03.036  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[32mzones_1      |[0m 2016-12-24 14:40:05.267  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[32mzones_1      |[0m 2016-12-24 14:40:05.267  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[31mplaylists_1  |[0m 2016-12-24 14:40:05.599  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[31mplaylists_1  |[0m 2016-12-24 14:40:05.600  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[33mdiscovery_1  |[0m 2016-12-24 14:40:06.182  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lastn],methods=[GET]}" onto public java.lang.String org.springframework.cloud.netflix.eureka.server.EurekaController.lastn(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:06.184  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String org.springframework.cloud.netflix.eureka.server.EurekaController.status(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:06.199  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:06.202  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[31mplaylists_1  |[0m 2016-12-24 14:40:06.892  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[31mplaylists_1  |[0m 2016-12-24 14:40:06.893  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[33mdiscovery_1  |[0m 2016-12-24 14:40:07.271  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:07.271  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[31mplaylists_1  |[0m 2016-12-24 14:40:08.272  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[32mzones_1      |[0m 2016-12-24 14:40:08.449  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[32mzones_1      |[0m 2016-12-24 14:40:08.622  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[32mzones_1      |[0m 2016-12-24 14:40:08.624  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[32mzones_1      |[0m 2016-12-24 14:40:08.625  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[32mzones_1      |[0m 2016-12-24 14:40:08.625  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[32mzones_1      |[0m 2016-12-24 14:40:08.629  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[32mzones_1      |[0m 2016-12-24 14:40:08.631  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[32mzones_1      |[0m 2016-12-24 14:40:08.631  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[33mdiscovery_1  |[0m 2016-12-24 14:40:09.074  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[32mzones_1      |[0m 2016-12-24 14:40:09.071 ERROR 1 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+[32mzones_1      |[0m 
+[32mzones_1      |[0m com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
+[32mzones_1      |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1030) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:944) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:444) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:304) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:51) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:180) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.CGLIB$eurekaClient$0(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9$$FastClassBySpringCGLIB$$75c1c2bb.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1023) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:359) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:176) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at com.sun.proxy.$Proxy77.getApplications(Unknown Source) [na:na]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.maybeInitializeClient(EurekaDiscoveryClientConfiguration.java:120) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.start(EurekaDiscoveryClientConfiguration.java:97) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:51) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:346) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:874) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at com.polytech.al.zones.SampleSimpleApplication.main(SampleSimpleApplication.java:38) [classes!/:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m Caused by: java.net.ConnectException: Connection refused
+[32mzones_1      |[0m 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:120) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	... 75 common frames omitted
+[32mzones_1      |[0m 
+[32mzones_1      |[0m 2016-12-24 14:40:09.076  WARN 1 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+[32mzones_1      |[0m 2016-12-24 14:40:09.085 ERROR 1 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones - was unable to refresh its cache! status = Cannot execute request on any known server
+[32mzones_1      |[0m 
+[32mzones_1      |[0m com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1030) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:944) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:444) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:304) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:51) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:180) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.CGLIB$eurekaClient$0(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9$$FastClassBySpringCGLIB$$75c1c2bb.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1023) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:359) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:176) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at com.sun.proxy.$Proxy77.getApplications(Unknown Source) [na:na]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.maybeInitializeClient(EurekaDiscoveryClientConfiguration.java:120) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.start(EurekaDiscoveryClientConfiguration.java:97) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:51) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:346) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:874) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[32mzones_1      |[0m 	at com.polytech.al.zones.SampleSimpleApplication.main(SampleSimpleApplication.java:38) [classes!/:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [app.jar:1.0-SNAPSHOT]
+[32mzones_1      |[0m 
+[32mzones_1      |[0m 2016-12-24 14:40:09.100  WARN 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+[32mzones_1      |[0m 2016-12-24 14:40:09.111  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+[32mzones_1      |[0m 2016-12-24 14:40:09.123  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+[32mzones_1      |[0m 2016-12-24 14:40:09.137  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1482590409137 with initial instances count: 0
+[32mzones_1      |[0m 2016-12-24 14:40:09.246  INFO 1 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application zones with eureka with status UP
+[32mzones_1      |[0m 2016-12-24 14:40:09.252  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1482590409252, current=UP, previous=STARTING]
+[32mzones_1      |[0m 2016-12-24 14:40:09.259  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones: registering service...
+[32mzones_1      |[0m 2016-12-24 14:40:09.301 ERROR 1 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+[32mzones_1      |[0m 
+[32mzones_1      |[0m com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
+[32mzones_1      |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:815) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+[32mzones_1      |[0m Caused by: java.net.ConnectException: Connection refused
+[32mzones_1      |[0m 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_102]
+[32mzones_1      |[0m 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:120) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient-4.5.2.jar!/:4.5.2]
+[32mzones_1      |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[32mzones_1      |[0m 	... 30 common frames omitted
+[32mzones_1      |[0m 
+[32mzones_1      |[0m 2016-12-24 14:40:09.303  WARN 1 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+[32mzones_1      |[0m 2016-12-24 14:40:09.304  WARN 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones - registration failed Cannot execute request on any known server
+[32mzones_1      |[0m 
+[32mzones_1      |[0m com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:815) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+[32mzones_1      |[0m 
+[32mzones_1      |[0m 2016-12-24 14:40:09.308  WARN 1 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+[32mzones_1      |[0m 
+[32mzones_1      |[0m com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:815) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.4.10.jar!/:1.4.10]
+[32mzones_1      |[0m 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+[32mzones_1      |[0m 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+[32mzones_1      |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.368  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.368  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.368  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.369  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.369  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.369  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[31mplaylists_1  |[0m 2016-12-24 14:40:09.369  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[32mzones_1      |[0m 2016-12-24 14:40:09.382  INFO 1 --- [           main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+[32mzones_1      |[0m 2016-12-24 14:40:09.385  INFO 1 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+[32mzones_1      |[0m 2016-12-24 14:40:09.446  INFO 1 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 61 ms
+[32mzones_1      |[0m 2016-12-24 14:40:09.510  INFO 1 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@28dd1b40{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[32mzones_1      |[0m 2016-12-24 14:40:09.517  INFO 1 --- [           main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+[32mzones_1      |[0m 2016-12-24 14:40:09.518  INFO 1 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8080
+[32mzones_1      |[0m 2016-12-24 14:40:09.532  INFO 1 --- [           main] c.p.al.zones.SampleSimpleApplication     : Started SampleSimpleApplication in 47.684 seconds (JVM running for 49.067)
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.131 ERROR 1 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
+[31mplaylists_1  |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1030) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:944) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:444) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:304) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:51) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:180) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.CGLIB$eurekaClient$1(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9$$FastClassBySpringCGLIB$$75c1c2bb.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1023) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:359) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:176) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at com.sun.proxy.$Proxy65.getApplications(Unknown Source) [na:na]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.maybeInitializeClient(EurekaDiscoveryClientConfiguration.java:120) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.start(EurekaDiscoveryClientConfiguration.java:97) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:51) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:346) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:874) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at com.polytech.al.playlists.SampleSimpleApplication.main(SampleSimpleApplication.java:82) [classes!/:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m Caused by: java.net.ConnectException: Connection refused
+[31mplaylists_1  |[0m 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:120) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	... 75 common frames omitted
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.132  WARN 1 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.134 ERROR 1 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists - was unable to refresh its cache! status = Cannot execute request on any known server
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1030) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:944) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:444) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:304) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:51) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:180) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.CGLIB$eurekaClient$1(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9$$FastClassBySpringCGLIB$$75c1c2bb.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33e62dc9.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1023) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:359) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:176) [spring-cloud-context-1.1.1.RELEASE.jar!/:1.1.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) [spring-aop-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at com.sun.proxy.$Proxy65.getApplications(Unknown Source) [na:na]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.maybeInitializeClient(EurekaDiscoveryClientConfiguration.java:120) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.start(EurekaDiscoveryClientConfiguration.java:97) [spring-cloud-netflix-eureka-client-1.1.5.RELEASE.jar!/:1.1.5.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:51) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:346) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:874) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) [spring-context-4.3.3.RELEASE.jar!/:4.3.3.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.1.RELEASE.jar!/:1.4.1.RELEASE]
+[31mplaylists_1  |[0m 	at com.polytech.al.playlists.SampleSimpleApplication.main(SampleSimpleApplication.java:82) [classes!/:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [app.jar:1.0-SNAPSHOT]
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.135  WARN 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.138  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.158  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.164  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1482590410163 with initial instances count: 0
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.261  INFO 1 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application Playlists with eureka with status UP
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.273  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1482590410273, current=UP, previous=STARTING]
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.276  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists: registering service...
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.299 ERROR 1 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
+[31mplaylists_1  |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:815) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+[31mplaylists_1  |[0m Caused by: java.net.ConnectException: Connection refused
+[31mplaylists_1  |[0m 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_102]
+[31mplaylists_1  |[0m 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:120) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient-4.5.2.jar!/:4.5.2]
+[31mplaylists_1  |[0m 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+[31mplaylists_1  |[0m 	... 30 common frames omitted
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.302  WARN 1 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.303  WARN 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists - registration failed Cannot execute request on any known server
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:815) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.303  WARN 1 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:815) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) ~[eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.4.10.jar!/:1.4.10]
+[31mplaylists_1  |[0m 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+[31mplaylists_1  |[0m 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+[31mplaylists_1  |[0m 
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.353  INFO 1 --- [           main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.353  INFO 1 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.405  INFO 1 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.437  INFO 1 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@5be067de{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.441  INFO 1 --- [           main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.442  INFO 1 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8080
+[36mmongodb_1    |[0m 2016-12-24T14:40:10.563+0000 I NETWORK  [initandlisten] connection accepted from 172.21.0.6:33412 #3 (3 connections now open)
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.580  INFO 1 --- [           main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:3}] to db:27017
+[31mplaylists_1  |[0m 2016-12-24 14:40:10.906  INFO 1 --- [           main] c.p.a.playlists.SampleSimpleApplication  : Started SampleSimpleApplication in 45.212 seconds (JVM running for 48.988)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.490  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.494  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.496  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.497  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.499  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.500  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.502  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.505  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.506  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.509  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.509  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.510  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.512  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.512  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.514  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.515  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.519  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.521  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.523  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.523  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:15.525  INFO 1 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[33mdiscovery_1  |[0m 2016-12-24 14:40:17.089  INFO 1 --- [           main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@256216b3: startup date [Sat Dec 24 14:39:32 GMT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@deb6432] and template loader path [classpath:/templates/]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:17.090  INFO 1 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+[33mdiscovery_1  |[0m 2016-12-24 14:40:18.450  WARN 1 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+[33mdiscovery_1  |[0m 2016-12-24 14:40:18.472  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[33mdiscovery_1  |[0m 2016-12-24 14:40:18.473  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33mdiscovery_1  |[0m 2016-12-24 14:40:18.488  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[33mdiscovery_1  |[0m 2016-12-24 14:40:18.489  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33mdiscovery_1  |[0m 2016-12-24 14:40:19.827  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+[33mdiscovery_1  |[0m 2016-12-24 14:40:19.838  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+[33mdiscovery_1  |[0m 2016-12-24 14:40:19.839  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.062  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.063  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.063  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.067  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.190  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.306  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.585  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=256216b3,type=ConfigurationPropertiesRebinder]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:20.595  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+[33mdiscovery_1  |[0m 2016-12-24 14:40:23.717  INFO 1 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+[33mdiscovery_1  |[0m 2016-12-24 14:40:23.720  INFO 1 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application unknown with eureka with status UP
+[33mdiscovery_1  |[0m 2016-12-24 14:40:23.724  INFO 1 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+[33mdiscovery_1  |[0m 2016-12-24 14:40:23.726  INFO 1 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+[33mdiscovery_1  |[0m 2016-12-24 14:40:23.727  INFO 1 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
+[33mdiscovery_1  |[0m 2016-12-24 14:40:24.082  INFO 1 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+[33mdiscovery_1  |[0m 2016-12-24 14:40:24.083  INFO 1 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+[33mdiscovery_1  |[0m 2016-12-24 14:40:24.091  INFO 1 --- [      Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+[33mdiscovery_1  |[0m 2016-12-24 14:40:24.796  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8761 (http)
+[33mdiscovery_1  |[0m 2016-12-24 14:40:24.797  INFO 1 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8761
+[33mdiscovery_1  |[0m 2016-12-24 14:40:24.802  INFO 1 --- [           main] hello.EurekaServiceApplication           : Started EurekaServiceApplication in 61.795 seconds (JVM running for 65.109)
+[32mzones_1      |[0m 2016-12-24 14:40:39.107  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[32mzones_1      |[0m 2016-12-24 14:40:39.107  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[32mzones_1      |[0m 2016-12-24 14:40:39.107  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[32mzones_1      |[0m 2016-12-24 14:40:39.108  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[32mzones_1      |[0m 2016-12-24 14:40:39.108  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[32mzones_1      |[0m 2016-12-24 14:40:39.108  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[32mzones_1      |[0m 2016-12-24 14:40:39.108  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[33mdiscovery_1  |[0m 2016-12-24 14:40:39.301  INFO 1 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+[33mdiscovery_1  |[0m 2016-12-24 14:40:39.301  INFO 1 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+[32mzones_1      |[0m 2016-12-24 14:40:39.308  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones: registering service...
+[33mdiscovery_1  |[0m 2016-12-24 14:40:39.323  INFO 1 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+[32mzones_1      |[0m 2016-12-24 14:40:39.533  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones - Re-registering apps/ZONES
+[32mzones_1      |[0m 2016-12-24 14:40:39.534  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones: registering service...
+[32mzones_1      |[0m 2016-12-24 14:40:39.573  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[32mzones_1      |[0m 2016-12-24 14:40:39.674  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones - registration status: 204
+[32mzones_1      |[0m 2016-12-24 14:40:39.674  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ZONES/96de0d376bda:zones - registration status: 204
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.138  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.216  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists - Re-registering apps/PLAYLISTS
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.217  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists: registering service...
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.283  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.322  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists: registering service...
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.432  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists - registration status: 204
+[31mplaylists_1  |[0m 2016-12-24 14:40:40.436  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PLAYLISTS/3c3c47a39447:Playlists - registration status: 204
+[32mzones_1      |[0m 2016-12-24 14:41:09.576  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[32mzones_1      |[0m 2016-12-24 14:41:09.576  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[32mzones_1      |[0m 2016-12-24 14:41:09.577  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[32mzones_1      |[0m 2016-12-24 14:41:09.577  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[32mzones_1      |[0m 2016-12-24 14:41:09.577  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[32mzones_1      |[0m 2016-12-24 14:41:09.577  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+[32mzones_1      |[0m 2016-12-24 14:41:09.577  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[32mzones_1      |[0m 2016-12-24 14:41:09.647  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.343  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.343  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.343  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.343  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.344  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.344  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.344  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[31mplaylists_1  |[0m 2016-12-24 14:41:10.390  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[32mzones_1      |[0m 2016-12-24 14:45:08.650  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[31mplaylists_1  |[0m 2016-12-24 14:45:09.866  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Gracefully stopping... (press Ctrl+C again to force)

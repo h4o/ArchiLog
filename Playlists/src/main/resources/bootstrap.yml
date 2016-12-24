@@ -4,11 +4,11 @@ spring:
 
 eureka:
   instance:
-      statusPageUrl: https://al-playlists.herokuapp.com/info
-      healthCheckUrl: https://al-playlists.herokuapp.com/health
-      homePageUrl: https://al-playlists.herokuapp.com/
-      hostname: al-playlists.herokuapp.com
-      non-secure-port: 80
+      statusPageUrl: ${HTTP_PROTOCOL}://${SELF_URL}/info
+      healthCheckUrl: ${HTTP_PROTOCOL}://${SELF_URL}/health
+      homePageUrl: ${HTTP_PROTOCOL}://${SELF_URL}/
+      hostname: ${SELF_URL}
+      non-secure-port: ${NON_SECURE_PORT}
   client:
     serviceUrl:
-      defaultZone: https://al-discovery.herokuapp.com/eureka/
+      defaultZone: ${EUREKA_URL}
