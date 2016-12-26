@@ -1,2 +1,2 @@
 #!/bin/sh
-mvn clean package -Dmaven.test.skip=true  && cd Playlists && ./dockerbuild.sh && cd ../Synchro && ./dockerbuild.sh && cd ../zones && ./dockerbuild.sh && cd .. && docker-compose build --no-cache && docker-compose up
+mvn clean package -Dmaven.test.skip=true  && cd Playlists && ./dockerbuild.sh && cd ../Synchro && ./dockerbuild.sh && cd ../zones && ./dockerbuild.sh && cd ../Requests && ./dockerbuild.sh && cd .. && docker-compose build --no-cache && docker-compose up

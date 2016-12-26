@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Requests
+
+eureka:
+  instance:
+      statusPageUrl: ${HTTP_PROTOCOL}://${SELF_URL}/info
+      healthCheckUrl: ${HTTP_PROTOCOL}://${SELF_URL}/health
+      homePageUrl: ${HTTP_PROTOCOL}://${SELF_URL}/
+      hostname: ${SELF_URL}
+      non-secure-port: ${NON_SECURE_PORT}
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL}

@@ -13,6 +13,7 @@
         <module>eureka-service</module>
         <module>zones</module>
         <module>Synchro</module>
+        <module>Requests</module>
     </modules>
 
 </project>
