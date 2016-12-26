@@ -38,7 +38,7 @@ import java.util.List;
         SampleSimpleApplication.class
 })
 @WebAppConfiguration
-public class SynchroTest {
+public class SynchroTest extends TestApplicationConfiguration{
     private MediaType contentType = new MediaType(MediaType.APPLICATION_JSON.getType(),
             MediaType.APPLICATION_JSON.getSubtype(),
             Charset.forName("utf8"));
