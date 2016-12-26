@@ -30,9 +30,9 @@ const client = new Eureka({
     },
   },
   eureka: {
-    host: 'al-discovery.herokuapp.com',
-    port: 80,
-    servicePath: '/eureka/apps/',
+    host: process.env.eurekaUrl || 'localhost',
+    port: process.env.eurekaPort || 8761,
+    servicePath: process.env.eurekaPath || '/eureka/apps/',
   },
 });
 
@@ -48,29 +48,42 @@ router.get('/', function(req, res) {
 	var zones = extractPort('zones');
 
   var synchro = extractPort('Synchro');
-
-  var playlists = extractPort('Playlists');
-  console.log("http://"+zones.hostname+':'+zones.port+'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude);
-  console.log("connecting to "+zones.ip+" with port"+zones.port);
+  console.log("http://"+
+    'localhost'//zones.hostname
+    +':'+
+    '8081'//zones.port
+    +'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude);
+  console.log("connecting to "+zones.hostname+" with port"+zones.port);
   request.get(
-    "http://"+zones.hostname+':'+zones.port+'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude,
+    "http://"+
+    'localhost'//zones.hostname
+    +':'+
+    '8081'//zones.port
+    +'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude,
     function (error,rest,bodyZ) {
       if (!error && rest.statusCode == 200) {
 
           console.log("Zone id: "+bodyZ);
-          console.log("url :"+'http://'+playlists.hostname+':'+playlists.port+'/zone/'+bodyZ+'/playlist');
-          request.get('http://'+playlists.hostname+':'+playlists.port+'/zone/'+bodyZ+'/playlist', function(err,resp,bodyP){
-          console.log('playlist: '+bodyP);
-          console.log('http://'+synchro.hostname+':'+synchro.port+'/synchro');
-          var play = JSON.parse(bodyP);
-          request.post(
-          'http://'+synchro.hostname+':'+synchro.port+'/synchro',
-          { json: play },
+          console.log('http://'+
+            "localhost"//synchro.hostname
+            +':'+
+            '8090'//synchro.port
+            +'/synchro');
+          //var play = JSON.parse(bodyP);
+          request.get(
+          'http://'+
+            "localhost"//synchro.hostname
+            +':'+
+            '8090'//synchro.port
+            +'/synchroZone/' + bodyZ,
+          
           function (error, resp, body) {
               if (!error && resp.statusCode == 200) {
-
-                  position = body.position
-                  time = body.time
+                  console.log(body)
+                  body = JSON.parse(body);
+                  play = body.playlist;
+                  position = body.position;
+                  time = body.time;
                 
                   if(position >= musics.length)
                     position = 0;
@@ -87,7 +100,7 @@ router.get('/', function(req, res) {
                 
                 }
             }
-          );});
+          );
       }
     });
   /*request.post(
