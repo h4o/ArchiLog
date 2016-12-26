@@ -1,11 +1,14 @@
 package com.polytech.al.playlists;
 
 import com.polytech.al.playlists.repositories.PlaylistRepository;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
@@ -15,7 +18,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @SpringApplicationConfiguration(classes = {
         SampleSimpleApplication.class
 })
-public class PlaylistTest {
+public class PlaylistTest extends TestApplicationConfiguration {
+
+
     @Autowired
     private PlaylistRepository repository;
 

@@ -6,10 +6,7 @@ import com.polytech.al.synchro.data.SynchroObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -23,10 +20,10 @@ import javax.inject.Named;
 public class SynchroService {
     @Autowired PlaylistsClient playlistsClient;
 
-    @RequestMapping(name="/test/")
-    public String test(){
+    @RequestMapping(name="/test/{zoneId}/")
+    public String test(@PathVariable("zoneId") String id){
 
-        return "JE SUIS UN TEST<br \\>"+playlistsClient.getPlaylist("0");
+        return "JE SUIS UN TEST<br \\>"+playlistsClient.getPlaylist(id);
     }
 
     @RequestMapping(method=RequestMethod.POST, name="/synchro/")
