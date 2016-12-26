@@ -1,8 +1,11 @@
 package com.polytech.al.zones.data;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hraf on 02/11/16.
@@ -10,13 +13,13 @@ import java.io.Serializable;
 
 @Document
 public class Zone implements Serializable {
+    @Id
     private String id ;
-//    @Id
-//    @JsonProperty
     private Coordinates center;
+    private List<Genre> genres = new ArrayList<Genre>();
 
 
-//43.707031, 7.192997
+
 
 
     public Zone(Coordinates center) {
@@ -24,13 +27,22 @@ public class Zone implements Serializable {
     }
 
 
-    public Zone(Coordinates coordinates,String id) {
+    public Zone(Coordinates coordinates,String id,List<Genre> genres) {
         this.center=coordinates;
         this.id=id;
+        this.genres=genres;
     }
 
 
     public Zone() {
+    }
+
+    public List<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
     }
     public Zone(String id) {
         this.id=id;
