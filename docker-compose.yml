@@ -7,6 +7,11 @@ services:
     links:
         - mongodb:db
         - discovery:eureka
+    environment:
+      - SELF_URL=zones
+      - EUREKA_URL=http://eureka:8761/eureka/
+      - HTTP_PROTOCOL=http
+      - NON_SECURE_PORT=8080
   playlists:
     build: ./Playlists/src/main/docker/
     ports:
@@ -14,13 +19,24 @@ services:
     links:
       - mongodb:db
       - discovery:eureka
+    environment:
+      - SELF_URL=playlists
+      - EUREKA_URL=http://eureka:8761/eureka/
+      - HTTP_PROTOCOL=http
+      - NON_SECURE_PORT=8080 
   synchro:
     build: ./Synchro/src/main/docker/
     ports:
       - "8090:8080"
     links:
       - mongodb:db
-      - discovery:eureka  
+      - discovery:eureka
+      - playlists
+    environment:
+      - SELF_URL=synchro
+      - EUREKA_URL=http://eureka:8761/eureka/
+      - HTTP_PROTOCOL=http 
+      - NON_SECURE_PORT=8080
   discovery:
     build: ./eureka-service/src/main/docker/
     ports:

@@ -28,11 +28,7 @@ public class ZonesSeviceImpl implements ZonesService {
     private IZoneFinderMongo zoneFinderMongo;
 
 
-
-//    @RequestMapping("/zones")
-//    public String getZone(@RequestParam(value="latitude") float latitude, @RequestParam(value="longitude")float longitude) {
-//        return zoneFinder.findByCoordinates(latitude, longitude).getId();
-//    }
+    
 
     @RequestMapping("/zones")
     public String getZone(@RequestParam(value="latitude") float latitude, @RequestParam(value="longitude")float longitude) {
@@ -66,14 +62,13 @@ public class ZonesSeviceImpl implements ZonesService {
     @RequestMapping(method = RequestMethod.POST,value = "zones/{zoneId}/genres")
     public void addGenre(@PathVariable String zoneId, @RequestBody List<Genre> genres) {
         //TODO : do this properly
+        //TODO using findOne
         List<Zone> all = zoneFinderMongo.findAll();
-        System.out.println(genres);
         Zone zone=null;
         for (Zone z :all) {
             if(z.getId().equals(zoneId))
                 zone = z;
         }
-        System.out.println(zone);
         zone.getGenres().addAll(genres);
         zoneFinderMongo.save(zone);
     }
