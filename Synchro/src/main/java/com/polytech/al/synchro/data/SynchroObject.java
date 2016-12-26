@@ -6,11 +6,13 @@ package com.polytech.al.synchro.data;
 public class SynchroObject {
     private int position;
     private float time;
+    private Playlist playlist;
 
-    public SynchroObject( float time,int position) {
+    public SynchroObject( float time,int position, Playlist playlist) {
 
         this.time = time;
         this.position = position;
+        this.playlist = playlist;
     }
 
     public SynchroObject(){
@@ -31,5 +33,13 @@ public class SynchroObject {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+
+    public Playlist getPlaylist() {
+        return playlist;
+    }
+
+    public void setPlaylist(Playlist playlist) {
+        this.playlist = playlist;
     }
 }
