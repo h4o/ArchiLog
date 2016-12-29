@@ -8,6 +8,11 @@ public class Song {
     private String id;
     private int iteration;
     private float length;
+    private int positionAfter;
+
+    public Song(){
+
+    }
 
     public Song(String id,float length, int iteration) {
         this.id = id;
@@ -38,5 +43,17 @@ public class Song {
 
     public void setLength(float length) {
         this.length = length;
+    }
+
+    public int getPositionAfter() {
+        return positionAfter;
+    }
+
+    public void setPositionAfter(int positionAfter) {
+        this.positionAfter = positionAfter;
+    }
+
+    public String toString(){
+        return "";
     }
 }

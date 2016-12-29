@@ -7,12 +7,14 @@ public class SynchroObject {
     private int position;
     private float time;
     private Playlist playlist;
+    private int iteration;
 
-    public SynchroObject( float time,int position, Playlist playlist) {
+    public SynchroObject( float time,int position, Playlist playlist, int iteration) {
 
         this.time = time;
         this.position = position;
         this.playlist = playlist;
+        this.iteration = iteration;
     }
 
     public SynchroObject(){
@@ -41,5 +43,13 @@ public class SynchroObject {
 
     public void setPlaylist(Playlist playlist) {
         this.playlist = playlist;
+    }
+
+    public int getIteration() {
+        return iteration;
+    }
+
+    public void setIteration(int iteration) {
+        this.iteration = iteration;
     }
 }
