@@ -13,6 +13,9 @@ import java.util.Map;
  */
 @FeignClient("SYNCHRO")
 public interface SynchroClient {
+
+
+
     @RequestMapping(value="synchroZone/{zone}", method = RequestMethod.GET)
     Synchro getSynchro(@RequestParam("zone") String zone);
 }
