@@ -4,6 +4,16 @@ var fileSystem = require('fs'),
 path = require('path');
 const Eureka = require('eureka-js-client').Eureka;
 var request = require('request');
+var Pusher = require('pusher-js/node');//we need the node version
+var PropertiesReader = require('properties-reader');
+var properties = PropertiesReader('pusher.properties');
+Pusher.logToConsole = true;
+
+    var pusher = new Pusher(properties.get('token'), {
+      cluster: 'eu',
+      encrypted: true
+    });
+
 /*
 var request = require('request-promise'); // suffisant si tes entrees et sorties sont des requetes http
 var q = require('q');// check la doc de q
@@ -41,6 +51,12 @@ client.start();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
+    //we only sucribe and bind to a channel when streaming
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      console.log('J\'ai reçu un message OMGOMOMG');
+    });
+
 	var musics = ["../music.mp3","../music1.mp3"]
 	var position = 0;
 	var time = 0;
@@ -132,8 +148,8 @@ router.get('/', function(req, res) {
 
 function extractPort(ServiceName){
 	const appInfo = client.getInstancesByAppId(ServiceName);
-	//console.log(appInfo)
-	return {  port:appInfo[0].port['$'], hostname:appInfo[0].hostName }
+	console.log(appInfo)
+	return {}//{  port:appInfo[0].port['$'], hostname:appInfo[0].hostName }
 
 }
 /*
