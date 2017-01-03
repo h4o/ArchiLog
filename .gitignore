@@ -11,3 +11,4 @@ settings.xml
 streamer/node_modules/*
 .gradle/
 logs.txt
+streamer/pusher.properties
