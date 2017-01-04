@@ -12,3 +12,5 @@ streamer/node_modules/*
 */node_modules/
 .gradle/
 logs.txt
+streamer/pusher.properties
+Requests/src/main/resources/pusher.properties

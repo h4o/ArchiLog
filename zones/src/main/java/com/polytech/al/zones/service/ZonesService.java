@@ -22,7 +22,7 @@ public interface ZonesService {
 
      void addGenre(String zoneId, List<Genre> genres);
 
-     List<Zone> getZoneByGenre(Genre genre);
+     String getZoneByGenre(Genre genre);
 
 
 }

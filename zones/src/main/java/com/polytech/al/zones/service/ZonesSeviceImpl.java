@@ -61,7 +61,7 @@ public class ZonesSeviceImpl implements ZonesService {
 
 
     @RequestMapping(method = RequestMethod.GET,value = "zones/{genre}")
-    public List<Zone> getZoneByGenre(@PathVariable Genre genre) {
+    public String getZoneByGenre(@PathVariable Genre genre) {
         List<Zone> zones = new ArrayList<Zone>();
         List<Zone> all = zoneFinderMongo.findAll();
         for(Zone z : all){
@@ -69,7 +69,7 @@ public class ZonesSeviceImpl implements ZonesService {
                 zones.add(z);
         }
 
-        return zones;
+        return zones.get(0).getId();
     }
 
     @RequestMapping(method = RequestMethod.POST,value = "zones/{zoneId}/genres")

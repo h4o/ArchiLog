@@ -32,6 +32,7 @@ services:
       - mongodb:db
       - discovery:eureka
       - synchro
+      - zones
     environment:
       - SELF_URL=requests
       - EUREKA_URL=http://eureka:8761/eureka/
