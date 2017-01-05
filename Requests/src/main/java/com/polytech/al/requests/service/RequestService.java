@@ -4,12 +4,15 @@ import com.polytech.al.requests.clients.SynchroClient;
 import com.polytech.al.requests.clients.ZonesClient;
 import com.polytech.al.requests.data.Song;
 import com.polytech.al.requests.data.Synchro;
+import com.polytech.al.requests.data.ZoneRequests;
 import com.polytech.al.requests.repositories.ZoneRequestsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 import com.pusher.rest.*;
 import java.util.Collections;
 import java.util.List;
@@ -64,14 +67,24 @@ public class RequestService {
 
         // GETing zone ID by genre, genre hardcoded for now
         String genre = "METAL";
-        String ZoneId = zonesClient.getZoneId(genre);
+//        String ZoneId = zonesClient.getZoneId(genre);
+        String zoneId = "0";
 
-        System.out.println(ZoneId);
-        Synchro synchroObject = synchro.getSynchro("0");//TODO get the zone by genre (need genre from metadata before)
+        Synchro synchroObject = synchro.getSynchro(zoneId);//TODO get the zone by genre (need genre from metadata before)
         s.setIteration(synchroObject.iteration);
 
         s.setPositionAfter(new Random().nextInt(synchroObject.playlist.songs.size()));
-        System.out.println(s);
+
+        List<ZoneRequests> zoneRequestsList = repository.findZoneRequestsByZoneId(zoneId);
+        if(zoneRequestsList.isEmpty()){
+            List<Song> songs = new ArrayList<Song>();
+            songs.add(s);
+            ZoneRequests zoneRequests = new ZoneRequests(null,songs,zoneId);
+            repository.save(zoneRequests);
+        }else{
+        ZoneRequests zoneRequests = repository.findZoneRequestsByZoneId(zoneId).get(0);
+        zoneRequests.getSongs().add(s);
+        repository.save(zoneRequests);
         //then we add (randomly for now) the song
 
 
@@ -84,6 +97,7 @@ public class RequestService {
         pusher.trigger("my-channel", "my-event", Collections.singletonMap("message", "hello world"));
 
         return;
+        }
     }
 
 }

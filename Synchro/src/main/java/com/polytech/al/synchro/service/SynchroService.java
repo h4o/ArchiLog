@@ -1,7 +1,10 @@
 package com.polytech.al.synchro.service;
 
 import com.polytech.al.synchro.clients.PlaylistsClient;
+import com.polytech.al.synchro.clients.RequestsClient;
 import com.polytech.al.synchro.data.Playlist;
+import com.polytech.al.synchro.data.Song;
+import com.polytech.al.synchro.data.SongRequest;
 import com.polytech.al.synchro.data.SynchroObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -18,11 +21,46 @@ import java.util.List;
 @RestController
 public class SynchroService {
     @Autowired PlaylistsClient playlistsClient;
+    @Autowired RequestsClient requestsClient;
+
+    private List<SongRequest> getRequestsForIteration(List<SongRequest> songRequests, int i){
+        List<SongRequest> response = new ArrayList<SongRequest>();
+        for(SongRequest sr : songRequests){
+            if(sr.iteration == i)
+                response.add(sr);
+        }
+        return response;
+    }
+
+    private float getRequestsLengthForIteration(List<SongRequest> songRequests, int i){
+        songRequests = getRequestsForIteration(songRequests,i);
+        float length = 0;
+        for(SongRequest sr : songRequests){
+            length += sr.length;
+        }
+        return length;
+    }
+
+    public void mergePlaylist(Playlist p, List<SongRequest> songRequests){
+        for(SongRequest sr : songRequests){
+            Song s = new Song();
+            s.setLength(sr.length);
+            s.setId(sr.name);
+            p.getSongs().add(sr.position_after,s);
+        }
+    }
 
     @RequestMapping(method = RequestMethod.GET,value = "/synchroZone/{zoneId}")
     public SynchroObject get(@PathVariable String zoneId){
         Playlist p = playlistsClient.getPlaylist(zoneId);//we request the current playlist
         //TODO add requests for the day
+        List<SongRequest> requests = new ArrayList<SongRequest>();
+        SongRequest sr = new SongRequest();
+        sr.iteration = 110;
+        sr.length = 145;
+        sr.position_after = 2;
+        sr.name = "test.mp3";
+        requests.add(sr);
         //get the elapsed time between midnight and now, we assume that we start at midnight
         Calendar c = Calendar.getInstance();
         long now = c.getTimeInMillis();
@@ -33,9 +71,15 @@ public class SynchroService {
         long passed = now - c.getTimeInMillis();
         float secondsPassed = passed;//this is in milliseconds now (TODO change variable name)
         long length = p.getLength()*1000;//get length in milliseconds
-        int iteration = (int) (secondsPassed / length);//used by request
-        float remaining = (secondsPassed % length)/1000;//remaining time in the current playlist (in seconds)
+        int iteration = 0;//(int) (secondsPassed / length);//used by request
+        float remaining = secondsPassed;
+        while(remaining > length + getRequestsLengthForIteration(requests,iteration)){
+            iteration++;
+            remaining -= length + getRequestsLengthForIteration(requests,iteration);
+        }
+        //float remaining = (secondsPassed % length)/1000;//remaining time in the current playlist (in seconds)
         int position = 0;
+        mergePlaylist(p,requests);
         for(int i = 0; i < p.getSongs().size(); i++){
             if(remaining < p.getSongs().get(i).getLength()){
                 position = i;
