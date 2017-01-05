@@ -8,4 +8,5 @@ public class SongRequest {
     public int length;
     public int iteration;
     public  int position_after;
+    public String id;
 }

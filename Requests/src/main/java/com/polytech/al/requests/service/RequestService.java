@@ -53,8 +53,11 @@ public class RequestService {
 
     @RequestMapping(method = RequestMethod.GET,value = "/zone/{zoneId}/")
     public List<Song> get(@PathVariable String zoneId){
-        System.out.println("hello");
-        return repository.findZoneRequestsByZoneId(zoneId).get(0).getSongs();
+        try {
+            return repository.findZoneRequestsByZoneId(zoneId).get(0).getSongs();
+        } catch (Exception e){
+            return new ArrayList<Song>();
+        }
     }
 
 
@@ -94,7 +97,7 @@ public class RequestService {
         pusher.setCluster("eu");
         pusher.setEncrypted(true);
 
-        pusher.trigger("my-channel", "my-event", Collections.singletonMap("message", "hello world"));
+        pusher.trigger("my-channel", "my-event", Collections.singletonMap("zone", zoneId));
 
         return;
         }

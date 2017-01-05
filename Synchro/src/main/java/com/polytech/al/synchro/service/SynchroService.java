@@ -45,8 +45,8 @@ public class SynchroService {
         for(SongRequest sr : songRequests){
             Song s = new Song();
             s.setLength(sr.length);
-            s.setId(sr.name);
-            p.getSongs().add(sr.position_after,s);
+            s.setId(sr.id);
+            p.getSongs().add(sr.position_after+1,s);
         }
     }
 
@@ -54,13 +54,7 @@ public class SynchroService {
     public SynchroObject get(@PathVariable String zoneId){
         Playlist p = playlistsClient.getPlaylist(zoneId);//we request the current playlist
         //TODO add requests for the day
-        List<SongRequest> requests = new ArrayList<SongRequest>();
-        SongRequest sr = new SongRequest();
-        sr.iteration = 110;
-        sr.length = 145;
-        sr.position_after = 2;
-        sr.name = "test.mp3";
-        requests.add(sr);
+        List<SongRequest> requests = requestsClient.getRequestsForZone(zoneId);
         //get the elapsed time between midnight and now, we assume that we start at midnight
         Calendar c = Calendar.getInstance();
         long now = c.getTimeInMillis();
@@ -73,21 +67,22 @@ public class SynchroService {
         long length = p.getLength()*1000;//get length in milliseconds
         int iteration = 0;//(int) (secondsPassed / length);//used by request
         float remaining = secondsPassed;
-        while(remaining > length + getRequestsLengthForIteration(requests,iteration)){
+        while(remaining > length + getRequestsLengthForIteration(requests,iteration) * 1000){
             iteration++;
-            remaining -= length + getRequestsLengthForIteration(requests,iteration);
+            remaining -= length + getRequestsLengthForIteration(requests,iteration) * 1000;
         }
         //float remaining = (secondsPassed % length)/1000;//remaining time in the current playlist (in seconds)
         int position = 0;
         mergePlaylist(p,requests);
         for(int i = 0; i < p.getSongs().size(); i++){
-            if(remaining < p.getSongs().get(i).getLength()){
+            if(remaining < p.getSongs().get(i).getLength() * 1000){
                 position = i;
                 break;
             }
-            remaining -= p.getSongs().get(i).getLength();
+            remaining -= p.getSongs().get(i).getLength()*1000;
+            position = i;
         }
-        return new SynchroObject(remaining,position,p,iteration);
+        return new SynchroObject(remaining/1000,position,p,iteration);
     }
 
 
