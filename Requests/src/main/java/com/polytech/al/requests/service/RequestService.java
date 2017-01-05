@@ -70,8 +70,8 @@ public class RequestService {
 
         // GETing zone ID by genre, genre hardcoded for now
         String genre = "METAL";
-//        String ZoneId = zonesClient.getZoneId(genre);
-        String zoneId = "0";
+        String ZoneId = zonesClient.getZoneId(genre);
+//        String zoneId = "0";
 
         Synchro synchroObject = synchro.getSynchro(zoneId);//TODO get the zone by genre (need genre from metadata before)
         s.setIteration(synchroObject.iteration);

@@ -5,7 +5,36 @@ router.get('/',function(req,res) {
 	var query = req.query.search;
 	res.send(requestSpotify(query));
 });
-	
+
+const Eureka = require('eureka-js-client').Eureka;
+
+
+
+/* a mettre apres dans app.js ou sur un autre fichier et utiliser 
+module.exports */
+const client = new Eureka({
+  instance: {
+    app: 'Metadata',
+    hostName: 'localhost',
+    ipAddr: '127.0.0.1',
+    statusPageUrl:  process.env.selfUrl || 'http://localhost:3000',
+    healthCheckUrl: process.env.selfUrl+'/health' || 'http://localhost:3000/health',
+    port: {
+      '$': 3000,
+      '@enabled': true,
+    },
+    vipAddress: 'Metadata',
+    dataCenterInfo: {
+      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
+      name: 'MyOwn',
+    },
+  },
+  eureka: {
+    host: process.env.eurekaUrl || 'localhost',
+    port: process.env.eurekaPort || 8761,
+    servicePath: process.env.eurekaPath || '/eureka/apps/',
+  },
+});
 
 
 

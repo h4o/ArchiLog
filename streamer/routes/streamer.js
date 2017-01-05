@@ -65,16 +65,16 @@ router.get('/', function(req, res) {
 
   var synchro = extractPort('Synchro');
   console.log("http://"+
-    'localhost'//zones.hostname
+    zones.hostname
     +':'+
-    '8081'//zones.port
+    zones.port
     +'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude);
   console.log("connecting to "+zones.hostname+" with port"+zones.port);
   request.get(
     "http://"+
-    'localhost'//zones.hostname
+    zones.hostname
     +':'+
-    '8081'//zones.port
+    zones.port
     +'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude,
     function (error,rest,bodyZ) {
       if (!error && rest.statusCode == 200) {
