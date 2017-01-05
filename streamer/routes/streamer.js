@@ -51,10 +51,17 @@ client.start();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
+    var play;
     //we only sucribe and bind to a channel when streaming
     var channel = pusher.subscribe('my-channel');
     channel.bind('my-event', function(data) {
       console.log('J\'ai reçu un message OMGOMOMG');
+      synchronize_request(data.zone, function(err,resp,body) {
+          if (!error && resp.statusCode == 200) {
+              var parsed_body = JSON.parse(body);
+              play = parsed_body.playlist;
+          }
+      });
     });
 
 	var musics = ["../music.mp3","../music1.mp3"]
@@ -86,20 +93,54 @@ router.get('/', function(req, res) {
             '8090'//synchro.port
             +'/synchro');
           //var play = JSON.parse(bodyP);
-          request.get(
-          'http://'+
-            "localhost"//synchro.hostname
-            +':'+
-            '8090'//synchro.port
-            +'/synchroZone/' + bodyZ,
-          
-          function (error, resp, body) {
+          synchronize_request(bodyZ, function (error, resp, body) {
+
               if (!error && resp.statusCode == 200) {
                   console.log(body)
                   body = JSON.parse(body);
                   play = body.playlist;
                   position = body.position;
                   time = body.time;
+                
+                  var readStream = stream_music(play,position,time);
+                  // We replaced all the event handlers with a simple call to readStream.pipe()
+                  readStream.pipe(res);
+
+                  readStream.on('end',function(){
+                     position ++;
+                     readStream = stream_music(play,position,0);
+                     readStream.pipe(res);
+                  });
+
+                
+                }
+            });
+      }
+    });
+
+});
+
+
+
+function synchronize_request(body,callback) {
+
+            request.get(
+          'http://'+
+            "localhost"//synchro.hostname
+            +':'+
+            '8090'//synchro.port
+            +'/synchroZone/' + body,callback);
+ 
+
+}
+
+
+
+
+
+
+
+function stream_music(play,position,time) {
                 
                   if(position >= musics.length)
                     position = 0;
@@ -109,40 +150,13 @@ router.get('/', function(req, res) {
 
                   res.set('Content-Type', 'audio/mpeg');
                   console.log("Advance the file by "+128*256*time + " ( "+time+" ) ##timestamp: "+Math.floor(Date.now() / 1000))
-                  var readStream = fileSystem.createReadStream(filePath,{start: Math.floor(16*1000*time)});
-                  // We replaced all the event handlers with a simple call to readStream.pipe()
-                  readStream.pipe(res);
+                  var music_to_stream = fileSystem.createReadStream(filePath,{start: Math.floor(16*1000*time)});
+                  return music_to_stream;
+}
 
-                
-                }
-            }
-          );
-      }
-    });
-  /*request.post(
-  'http://al-synchro.herokuapp.com/synchro',
-  { json: {id:"3",songs:[{id:"Barbiegirl.mp3",length:237},{id:"Ma gueule.mp3",length:348}]} },
-  function (error, resp, body) {
-      if (!error && resp.statusCode == 200) {
-          	position = body.position
-          	time = body.time
-      		
-      			if(position >= musics.length)
-      				position = 0;
-          	    var filePath = path.join(__dirname, musics[position]);
-			    var stat = fileSystem.statSync(filePath);
 
-				  res.set('Content-Type', 'audio/mpeg');
-			    console.log("Advance the file by "+128*256*time + " ( "+time+" ) ##timestamp: "+Math.floor(Date.now() / 1000))
-			    var readStream = fileSystem.createReadStream(filePath,{start: Math.floor(16*1000*time)});
-			    // We replaced all the event handlers with a simple call to readStream.pipe()
-			    readStream.pipe(res);
 
-				
-        }
-    }
-	);*/
-});
+
 
 /*same file as client eureka */
 
