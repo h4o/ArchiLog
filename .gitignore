@@ -9,6 +9,7 @@ settings.xml
 *~
 *.mp3
 streamer/node_modules/*
+*/node_modules/
 .gradle/
 logs.txt
 streamer/pusher.properties
