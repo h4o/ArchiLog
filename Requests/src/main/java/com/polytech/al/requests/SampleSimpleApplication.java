@@ -26,12 +26,18 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 
 @EnableFeignClients
 @EnableDiscoveryClient
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
+@PropertySources({
+		@PropertySource("classpath:bootstrap.yml"),
+		@PropertySource("classpath:pusher.properties")
+})
 public class SampleSimpleApplication implements CommandLineRunner {
 
 	// Simple example shows how a command line spring application can execute an
