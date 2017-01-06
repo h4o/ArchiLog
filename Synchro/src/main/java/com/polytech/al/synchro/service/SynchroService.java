@@ -67,19 +67,21 @@ public class SynchroService {
         long length = p.getLength()*1000;//get length in milliseconds
         int iteration = 0;//(int) (secondsPassed / length);//used by request
         float remaining = secondsPassed;
-        while(remaining > length + getRequestsLengthForIteration(requests,iteration) * 1000){
+        while(remaining > (length + (getRequestsLengthForIteration(requests,iteration) * 1000))){
+
+            remaining -= length + (getRequestsLengthForIteration(requests,iteration) * 1000);
             iteration++;
-            remaining -= length + getRequestsLengthForIteration(requests,iteration) * 1000;
         }
+        
         //float remaining = (secondsPassed % length)/1000;//remaining time in the current playlist (in seconds)
         int position = 0;
-        mergePlaylist(p,requests);
+        mergePlaylist(p,getRequestsForIteration(requests,iteration));
         for(int i = 0; i < p.getSongs().size(); i++){
-            if(remaining < p.getSongs().get(i).getLength() * 1000){
+            if(remaining < (p.getSongs().get(i).getLength() * 1000)){
                 position = i;
                 break;
             }
-            remaining -= p.getSongs().get(i).getLength()*1000;
+            remaining -= (p.getSongs().get(i).getLength()*1000);
             position = i;
         }
         return new SynchroObject(remaining/1000,position,p,iteration);

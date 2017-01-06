@@ -7,6 +7,7 @@ var request = require('request');
 var Pusher = require('pusher-js/node');//we need the node version
 var PropertiesReader = require('properties-reader');
 var properties = PropertiesReader('pusher.properties');
+var CombinedStream = require('combined-stream2');
 Pusher.logToConsole = true;
 
     var pusher = new Pusher(properties.get('token'), {
@@ -40,10 +41,10 @@ const client = new Eureka({
     },
   },
   eureka: {
-    host: process.env.eurekaUrl || 'localhost',
-    port: process.env.eurekaPort || 8761,
-    servicePath: process.env.eurekaPath || '/eureka/apps/',
-  },
+    host: 'al-discovery.herokuapp.com',
+    port: 80,
+    servicePath: '/eureka/apps/',
+},
 });
 
 client.start();
@@ -55,11 +56,12 @@ router.get('/', function(req, res) {
     //we only sucribe and bind to a channel when streaming
     var channel = pusher.subscribe('my-channel');
     channel.bind('my-event', function(data) {
-      console.log('J\'ai reçu un message OMGOMOMG');
+      console.log('========================================\nUPDATE EVENT');
       synchronize_request(data.zone, function(err,resp,body) {
-          if (!error && resp.statusCode == 200) {
+          if (!err && resp.statusCode == 200) {
               var parsed_body = JSON.parse(body);
               play = parsed_body.playlist;
+              console.log(play);
           }
       });
     });
@@ -88,9 +90,9 @@ router.get('/', function(req, res) {
 
           console.log("Zone id: "+bodyZ);
           console.log('http://'+
-            "localhost"//synchro.hostname
+            synchro.hostname
             +':'+
-            '8090'//synchro.port
+            synchro.port
             +'/synchro');
           //var play = JSON.parse(bodyP);
           synchronize_request(bodyZ, function (error, resp, body) {
@@ -101,16 +103,15 @@ router.get('/', function(req, res) {
                   play = body.playlist;
                   position = body.position;
                   time = body.time;
-                
-                  var readStream = stream_music(play,position,time);
+                res.set('Content-Type', 'audio/mpeg');
+                  var combinedStream = CombinedStream.create();
+                  var readStream = stream_music(play,position,time,res);
                   // We replaced all the event handlers with a simple call to readStream.pipe()
-                  readStream.pipe(res);
+                  append_streams(position,combinedStream,play,res)
 
-                  readStream.on('end',function(){
-                     position ++;
-                     readStream = stream_music(play,position,0);
-                     readStream.pipe(res);
-                  });
+                  combinedStream.pipe(res);
+
+
 
                 
                 }
@@ -120,15 +121,26 @@ router.get('/', function(req, res) {
 
 });
 
+function append_streams(index,combinedStream,play,res){
+    index++;
+      if(index === play.songs.length)
+        return;
+                    combinedStream.append(function(next){
 
+                       next(stream_music(play,index,0,res));
+                      
+                      
+                    });
+                    append_streams(index,combinedStream,play,res);
+}
 
 function synchronize_request(body,callback) {
-
+          var synchro = extractPort("Synchro");
             request.get(
           'http://'+
-            "localhost"//synchro.hostname
+            synchro.hostname
             +':'+
-            '8090'//synchro.port
+            synchro.port
             +'/synchroZone/' + body,callback);
  
 
@@ -140,15 +152,15 @@ function synchronize_request(body,callback) {
 
 
 
-function stream_music(play,position,time) {
+function stream_music(play,position,time,res) {
                 
-                  if(position >= musics.length)
+                  if(position >= play.songs.length)
                     position = 0;
                   console.log(play.songs[position].id);
                   var filePath = path.join(__dirname,'../' + play.songs[position].id);
                   var stat = fileSystem.statSync(filePath);
 
-                  res.set('Content-Type', 'audio/mpeg');
+                  
                   console.log("Advance the file by "+128*256*time + " ( "+time+" ) ##timestamp: "+Math.floor(Date.now() / 1000))
                   var music_to_stream = fileSystem.createReadStream(filePath,{start: Math.floor(16*1000*time)});
                   return music_to_stream;
@@ -163,7 +175,7 @@ function stream_music(play,position,time) {
 function extractPort(ServiceName){
 	const appInfo = client.getInstancesByAppId(ServiceName);
 	console.log(appInfo)
-	return {}//{  port:appInfo[0].port['$'], hostname:appInfo[0].hostName }
+	return {  port:appInfo[0].port['$'], hostname:appInfo[0].hostName }
 
 }
 /*

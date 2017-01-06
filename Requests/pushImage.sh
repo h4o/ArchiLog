@@ -2,4 +2,4 @@
 mvn clean package
 ./dockerbuild.sh
 cd ./src/main/docker/heroku
-heroku container:push --app al-playlists
+heroku container:push --app al-requests
