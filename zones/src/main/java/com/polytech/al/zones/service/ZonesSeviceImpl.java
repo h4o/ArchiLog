@@ -9,8 +9,7 @@ import com.polytech.al.zones.distance.twoD.IDistanceCalculator2D;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by hraf on 02/11/16.
@@ -57,6 +56,16 @@ public class ZonesSeviceImpl implements ZonesService {
     public List<Genre> getGenres(@PathVariable String zoneId) {
 
         return zoneFinderMongo.findOne(zoneId).getGenres();
+    }
+
+    @RequestMapping(method = RequestMethod.GET,value = "genres" )
+    public List<Genre> getAvailableGenres(){
+        List<Zone> zones = zoneFinderMongo.findAll();
+        Set<Genre> genres = new TreeSet<Genre>();
+        for(Zone z:zones){
+            genres.addAll(z.getGenres());
+        }
+        return new ArrayList<Genre>(genres);
     }
 
 
