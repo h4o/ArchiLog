@@ -73,12 +73,7 @@ router.get('/', function(req, res) {
 	var zones = extractPort('zones');
 
   var synchro = extractPort('Synchro');
-  console.log("http://"+
-    zones.hostname
-    +':'+
-    zones.port
-    +'/zones?longitude='+req.query.longitude+'&latitude='+req.query.latitude);
-  console.log("connecting to "+zones.hostname+" with port"+zones.port);
+
   request.get(
     "http://"+
     zones.hostname
@@ -88,12 +83,7 @@ router.get('/', function(req, res) {
     function (error,rest,bodyZ) {
       if (!error && rest.statusCode == 200) {
 
-          console.log("Zone id: "+bodyZ);
-          console.log('http://'+
-            synchro.hostname
-            +':'+
-            synchro.port
-            +'/synchro');
+
           //var play = JSON.parse(bodyP);
           synchronize_request(bodyZ, function (error, resp, body) {
 
@@ -104,10 +94,12 @@ router.get('/', function(req, res) {
                   position = body.position;
                   time = body.time;
                 res.set('Content-Type', 'audio/mpeg');
+
                   var combinedStream = CombinedStream.create();
                   var readStream = stream_music(play,position,time,res);
+                  combinedStream.append(readStream);
                   // We replaced all the event handlers with a simple call to readStream.pipe()
-                  append_streams(position,combinedStream,play,res)
+                  append_streams(position,combinedStream,play,res,time)
 
                   combinedStream.pipe(res);
 
@@ -121,17 +113,87 @@ router.get('/', function(req, res) {
 
 });
 
-function append_streams(index,combinedStream,play,res){
+router.get("/genre/:genre",function(req,res){
+  //res.send("get genre "+req.params.genre);
+      var play;
+    //we only sucribe and bind to a channel when streaming
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      console.log('========================================\nUPDATE EVENT');
+      synchronize_request(data.zone, function(err,resp,body) {
+          if (!err && resp.statusCode == 200) {
+              var parsed_body = JSON.parse(body);
+              play = parsed_body.playlist;
+              console.log(play);
+          }
+      });
+    });
+
+  var musics = ["../music.mp3","../music1.mp3"]
+  var position = 0;
+  var time = 0;
+
+  var zones = extractPort('zones');
+
+  var synchro = extractPort('Synchro');
+  console.log("Requesting the zone....");
+  console.log(    "http://"+
+    zones.hostname
+    +':'+
+    zones.port
+    +'/zones/'+req.params.genre)
+  request.get(
+    "http://"+
+    zones.hostname
+    +':'+
+    zones.port
+    +'/zones/'+req.params.genre,
+    function (error,rest,bodyZ) {
+      if (!error && rest.statusCode == 200) {
+          console.log("done");
+
+          //var play = JSON.parse(bodyP);
+          synchronize_request(bodyZ, function (error, resp, body) {
+
+              if (!error && resp.statusCode == 200) {
+                  console.log(body)
+                  body = JSON.parse(body);
+                  play = body.playlist;
+                  position = body.position;
+                  time = body.time;
+                res.set('Content-Type', 'audio/mpeg');
+
+                  var combinedStream = CombinedStream.create();
+                  console.log("trying to read the stream");
+                  var readStream = stream_music(play,position,time,res);
+
+                  combinedStream.append(readStream);
+                  // We replaced all the event handlers with a simple call to readStream.pipe()
+                  append_streams(position,combinedStream,play,res,0)
+
+                  combinedStream.pipe(res);
+
+
+
+                
+                }
+            });
+      }
+    });
+
+});
+
+function append_streams(index,combinedStream,play,res,time){
     index++;
       if(index === play.songs.length)
         return;
                     combinedStream.append(function(next){
-
-                       next(stream_music(play,index,0,res));
+                      console.log('append stream for time'+time);
+                       next(stream_music(play,index,time,res));
                       
                       
                     });
-                    append_streams(index,combinedStream,play,res);
+                    append_streams(index,combinedStream,play,res,0);
 }
 
 function synchronize_request(body,callback) {
