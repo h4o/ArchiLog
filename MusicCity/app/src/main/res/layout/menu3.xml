@@ -4,5 +4,29 @@
     android:layout_height="match_parent">
 
 
+    <Button
+        android:text="Get List Music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:id="@+id/getListMusic"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
+    <SearchView
+        android:id="@+id/searchMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search.."
+        android:layout_below="@id/getListMusic"
+        >
+    </SearchView>
+        <ListView
+            android:id="@+id/listMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchMusic"/>
 </RelativeLayout>

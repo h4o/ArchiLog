@@ -14,3 +14,4 @@ streamer/node_modules/*
 logs.txt
 streamer/pusher.properties
 Requests/src/main/resources/pusher.properties
+music-storage/file-uploads/

@@ -13,8 +13,8 @@
             android:title="Search by kind" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:icon="@drawable/ic_menu_schudle"
+            android:title="Schudle music" />
     </group>
 
 
