@@ -7,11 +7,13 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,9 @@ import android.widget.Toast;
 
 import com.al.music.library.SimpleLocation;
 
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -33,9 +38,8 @@ import java.util.concurrent.TimeUnit;
  * Created by user on 12/01/2017.
  */
 
-public class Menu1 extends Fragment {
+public class Menu1 extends Fragment  {
     TextView title;
-
 
     private static final int  MY_PERMISSIONS_REQUEST = 1 ;
     private SimpleLocation mLocation;
@@ -44,6 +48,7 @@ public class Menu1 extends Fragment {
     static MediaPlayer mPlayer;
     Button buttonPlay;
     Button buttonStop;
+    String test = " ";
 
     String urlRecuperer;
 
@@ -70,11 +75,12 @@ public class Menu1 extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Acceuil");
+        getActivity().setTitle("Your music");
 
 
         zone1 = (CheckBox) view.findViewById(R.id.zone1);
         zone2 = (CheckBox) view.findViewById(R.id.zone2);
+
 
         zone1.setOnClickListener(new View.OnClickListener() {
 
@@ -91,14 +97,14 @@ public class Menu1 extends Fragment {
         tx1 = (TextView) view.findViewById(R.id.textView2);
 
 
-        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
+      //  Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.genres_array, android.R.layout.simple_spinner_item);
+       // ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+          //      R.array.genres_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       // adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+      //  spinner.setAdapter(adapter);
 
         // title = (TextView) view.findViewById(R.id.latitude);
         //title.setText("Je suis un fragment");
@@ -115,6 +121,7 @@ public class Menu1 extends Fragment {
         }
         ((TextView) view.findViewById(R.id.latitude)).setText(String.valueOf(mLocation.getLatitude()));
         ((TextView) view.findViewById(R.id.longitude)).setText(String.valueOf(mLocation.getLongitude()));
+
 
         urlRecuperer = "http://al-music-streamer.herokuapp.com/streamer?latitude=" + String.valueOf(mLocation.getLatitude()) + "&longitude=" + String.valueOf(mLocation.getLongitude());
 
@@ -186,14 +193,7 @@ public class Menu1 extends Fragment {
         });
 
 
-        }
-
-
-
-
-
-
-
+    }
 
 
     public void onDestroy() {
@@ -229,13 +229,8 @@ public class Menu1 extends Fragment {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-
                 } else {
 
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
                 }
                 return;
             }
@@ -244,5 +239,51 @@ public class Menu1 extends Fragment {
             // permissions this app might request
         }
     }
+    @Override
+   public void onStart() {
+        super.onStart();
+        new HttpRequestTask().execute();
+    }
+
+    private class HttpRequestTask extends AsyncTask<Void, Void, Greeting> {
+
+        @Override
+        protected Greeting doInBackground(Void... params) {
+            try {
+                final String url = "http://rest-service.guides.spring.io/greeting";
+                RestTemplate restTemplate = new RestTemplate();
+                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+                Greeting greeting = restTemplate.getForObject(url, Greeting.class);
+                //ResponseEntity<Greeting> responseEntity = restTemplate.postForEntity(url,new Greeting(),Greeting.class);
+
+                Log.e("MainActivity",greeting+"");
+                return greeting;
+            } catch (Exception e) {
+                Log.e("MainActivity", e.getMessage(), e);
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Greeting greeting) {
+           // TextView greetingContentText = (TextView) findViewById(R.id.content_value3);
+
+            Log.e("MainActivity est bien ",greeting.getContent());
+            test=greeting.getContent();
+
+            Toast.makeText(getContext(), test + "récuperé ! " , Toast.LENGTH_LONG).show();
+
+            TextView greetingContentText = (TextView) getView().findViewById(R.id.content_value3);
+            greetingContentText.setText(test);
+
+
+
+
+        }
+
+
+    }
+
 
 }

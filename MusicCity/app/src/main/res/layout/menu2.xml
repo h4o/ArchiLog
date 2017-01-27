@@ -12,12 +12,45 @@
         android:queryHint="Search.."
         >
     </SearchView>
+
+
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/searchView1"
-        android:layout_marginTop="22dp" >
+        android:layout_marginTop="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/searchView1">
     </ListView>
+
+    <TextView
+        android:id="@+id/genre"
+        android:text="vide"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/listView1"
+        />
+
+    <Button
+        android:id="@+id/play2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dip"
+        android:text="Play"
+        android:layout_below="@id/genre"
+        />
+    <Button
+        android:id="@+id/stop2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/play2"
+        android:layout_toRightOf="@+id/play2"
+        android:layout_toEndOf="@+id/play2"
+        android:text="Stop"
+        android:layout_below="@id/play2"
+        />
+
 </RelativeLayout>

@@ -5,12 +5,12 @@
 
         <item
             android:id="@+id/nav_genres"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Genres" />
+            android:icon="@drawable/ic_menu_acceuil"
+            android:title="Your music" />
         <item
             android:id="@+id/nav_schudle"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Schudle" />
+            android:icon="@drawable/ic_menu_search"
+            android:title="Search by kind" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

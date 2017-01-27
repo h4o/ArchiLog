@@ -63,17 +63,15 @@
         />
 
 
-    <TextView android:text="Latitude"
+    <TextView android:text="Latitude : "
         android:layout_marginTop="30dp"
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginLeft="10dip"
-
         android:layout_below="@id/seekBar"
         />
-    <EditText android:text="0.0"
+    <TextView android:text="0.0"
         android:id="@+id/latitude"
         android:layout_height="wrap_content"
         android:layout_width="150dip"
@@ -82,14 +80,14 @@
         android:layout_toEndOf="@+id/TextView01"
         android:layout_centerHorizontal="true" />
 
-    <TextView android:text="Longitude"
+    <TextView android:text="Longitude  : "
         android:id="@+id/TextView02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/latitude"
         android:layout_marginLeft="10dip" />
 
-    <EditText android:text="0.0"
+    <TextView android:text="0.0"
         android:id="@+id/longitude"
         android:layout_height="wrap_content"
         android:layout_width="150dip"
@@ -98,10 +96,39 @@
         android:layout_toRightOf="@+id/TextView02"
         android:layout_toEndOf="@+id/TextView02" />
 
-    <Spinner
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/longitude"
 
-        android:id="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/id_value2"
+        android:text="[id]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/TextView02"
+       />
+
+    <TextView
+        android:id="@+id/content_value2"
+        android:text="[content]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_value2"
+        />
+    <TextView
+        android:id="@+id/content_value3"
+        android:text="[content]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView02"
+        />
+
+
+
+    <!--  <Spinner
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_below="@+id/longitude"
+
+          android:id="@+id/spinner" />-->
+
 </RelativeLayout>
