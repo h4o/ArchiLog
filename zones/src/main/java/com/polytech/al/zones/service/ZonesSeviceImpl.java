@@ -77,7 +77,6 @@ public class ZonesSeviceImpl implements ZonesService {
             if(z.getGenres().contains(genre))
                 zones.add(z);
         }
-
         return zones.get(0).getId();
     }
 
