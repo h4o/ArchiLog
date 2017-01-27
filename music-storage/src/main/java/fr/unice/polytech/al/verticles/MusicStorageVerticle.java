@@ -2,7 +2,10 @@ package fr.unice.polytech.al.verticles;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
+import io.vertx.core.json.JsonObject;
+import io.vertx.ext.mongo.MongoClient;
 import io.vertx.ext.web.Router;
+import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
 import io.vertx.ext.web.handler.CorsHandler;
 
@@ -14,6 +17,7 @@ public class MusicStorageVerticle extends AbstractVerticle {
 
     @Override
     public void start(Future<Void> fut) {
+        String fileToServe = "www/upload.html";
         Router router = Router.router(vertx);
 
         router.route().handler(CorsHandler.create("*")
@@ -33,8 +37,13 @@ public class MusicStorageVerticle extends AbstractVerticle {
                 .produces("application/mpeg")
                 .handler(MusicRequestHandler::handleGetMusic);
 
-        router.post("/musicStore/")
-                .consumes("application/json")
+        router.get("/musicRequest/:id")
+                .produces("application/json")
+                .handler(MusicRequestHandler::requestMusicById);
+        router.get("/musicStore/add/").handler(routingContext -> {
+           routingContext.response().sendFile(fileToServe);
+        });
+        router.post("/musicStore/add/")
                 .produces("application/json")
                 .handler(MusicRequestHandler::handlePostMusic);
         vertx
@@ -52,7 +61,26 @@ public class MusicStorageVerticle extends AbstractVerticle {
                             }
                         }
                 );
+        JsonObject config = new JsonObject();
+        String uri = config.getString("mongo_uri");
+        if (uri == null) {
+            uri = "mongodb://mongo:27017";
+        }
+        String db = config.getString("mongo_db");
+        if (db == null) {
+            db = "test";
+        }
+
+
+        JsonObject mongoconfig = new JsonObject()
+                .put("connection_string", uri)
+                .put("db_name", db);
+        //initialize the shared client, hope it wont fail because I'm not sure how to handle that
+        MongoClient mongoClient = MongoClient.createShared(vertx, mongoconfig);
 
     }
+
+
+
 
 }

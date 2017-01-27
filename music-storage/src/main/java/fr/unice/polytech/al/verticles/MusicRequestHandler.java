@@ -2,8 +2,14 @@ package fr.unice.polytech.al.verticles;
 
 import io.vertx.core.file.AsyncFile;
 import io.vertx.core.file.OpenOptions;
+import io.vertx.core.json.JsonObject;
 import io.vertx.core.streams.Pump;
+import io.vertx.ext.mongo.MongoClient;
+import io.vertx.ext.web.FileUpload;
 import io.vertx.ext.web.RoutingContext;
+
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Created by ytijani on 29/12/2016.
@@ -23,8 +29,58 @@ public class MusicRequestHandler {
         });
     }
 
+
+    public static void requestMusicById(RoutingContext rc){
+        System.out.println("RequestMusicById");
+        JsonObject config = new JsonObject();
+        //hope it's already configured
+        MongoClient client = MongoClient.createShared(rc.vertx(),config);
+        JsonObject query = new JsonObject();
+
+        client.find("music",query, listAsyncResult -> {
+            System.out.println("something happened !!"+listAsyncResult);
+            if(listAsyncResult.succeeded()){
+                if(listAsyncResult.result().size() > 0)
+                    rc.response().end(listAsyncResult.result().get(0).encode());
+                else
+                    rc.response().end();
+            } else {
+                rc.response().end("Failure");
+            }
+
+        });
+    }
+
+
     public static void handlePostMusic(RoutingContext rc) {
+        Set<FileUpload> fileUploadSet = rc.fileUploads();
+        Iterator<FileUpload> fileUploadIterator = fileUploadSet.iterator();
+       // while(fileUploadIterator.hasNext()){
+        FileUpload fileUpload;
+        if(fileUploadIterator.hasNext()) {
+            fileUpload = fileUploadIterator.next();
+
+        } else {
+            rc.response().end("Failure :( no files");
+            return;
+        }
+       // }
+        JsonObject music = new JsonObject();
+        music.put("name",rc.request().getParam("name"))
+                .put("artist",rc.request().getParam("artist"))
+                .put("length",rc.request().getParam("length"))
+                .put("bitrate",rc.request().getParam("bitrate"))
+                .put("genre",rc.request().getParam("genre"));
+
+        MongoClient client = MongoClient.createShared(rc.vertx(),new JsonObject());
+        client.insert("musics",music,result -> {
+            System.out.println("wrote to db "+result.result());
+            rc.vertx().fileSystem().move(fileUpload.uploadedFileName(), "data/music/"+result.result()+".mp3", rst -> {
+                rc.response().end("Success !");
+            });
+        });
 
     }
+    
 
 }
