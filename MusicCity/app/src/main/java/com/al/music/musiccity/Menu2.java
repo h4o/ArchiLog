@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -60,11 +61,11 @@ public class Menu2 extends Fragment  {
                 final String url = "http://al-zones.herokuapp.com/genres";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Genre greeting = restTemplate.getForObject(url, Genre.class);
+                Genre genre = restTemplate.getForObject(url, Genre.class);
                 //ResponseEntity<Greeting> responseEntity = restTemplate.postForEntity(url,new Greeting(),Greeting.class);
 
-                Log.e("MainActivity",greeting+"");
-                return greeting;
+                Log.e("MainActivity",genre+"");
+                return genre;
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -73,12 +74,12 @@ public class Menu2 extends Fragment  {
         }
 
         @Override
-        protected void onPostExecute(Genre greeting) {
+        protected void onPostExecute(Genre genre) {
             // TextView greetingContentText = (TextView) findViewById(R.id.content_value3);
 
-            Log.e("MainActivity est bien ",greeting.getGenres().toString());
-            teams=greeting.getGenres();
-            Toast.makeText(getContext(),"Liste de genre trouvée  " , Toast.LENGTH_LONG).show();
+            Log.e("MainActivity est bien ",genre.getGenres().toString());
+            teams=genre.getGenres();
+            Toast.makeText(getContext(),"List of kind found and added " , Toast.LENGTH_LONG).show();
             adapter.clear();
             adapter.addAll(teams);
             //  test=greeting.getContent();
@@ -115,6 +116,20 @@ public class Menu2 extends Fragment  {
         adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, teams);
         lv.setAdapter(adapter);
        // teams=greeting.getGenres();
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0,
+                                    View arg1, int position, long id) {
+                //le code à effectuer suite à un click
+                Toast.makeText(getContext(),teams.get(position) +" is chosen !", Toast.LENGTH_LONG).show();
+                GenreText.setText(teams.get(position));
+                a= teams.get(position);
+            }
+        });
+
+
+
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String text) {
