@@ -59,13 +59,13 @@ public class ZonesSeviceImpl implements ZonesService {
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "genres" )
-    public List<Genre> getAvailableGenres(){
+    public GenreResult getAvailableGenres(){
         List<Zone> zones = zoneFinderMongo.findAll();
         Set<Genre> genres = new TreeSet<Genre>();
         for(Zone z:zones){
             genres.addAll(z.getGenres());
         }
-        return new ArrayList<Genre>(genres);
+        return new GenreResult(new ArrayList<Genre>(genres));
     }
 
 
@@ -95,4 +95,22 @@ public class ZonesSeviceImpl implements ZonesService {
     }
 
 
+}
+class GenreResult{
+    public GenreResult(ArrayList<Genre> genres) {
+        this.genres = genres;
+    }
+
+    public GenreResult() {
+    }
+
+    private ArrayList<Genre> genres;
+
+    public ArrayList<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(ArrayList<Genre> genres) {
+        this.genres = genres;
+    }
 }

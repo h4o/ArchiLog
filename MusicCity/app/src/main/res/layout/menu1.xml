@@ -44,22 +44,16 @@
         android:text="Stop"
         android:layout_below="@id/zone2"
         />
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dip"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@id/stop"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="time"
-
         android:id="@+id/textView2"
-        android:layout_below="@+id/seekBar"
+        android:layout_below="@+id/stop"
+        android:layout_centerHorizontal="true"
         />
 
 
@@ -69,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dip"
-        android:layout_below="@id/seekBar"
+        android:layout_below="@id/textView2"
         />
     <TextView android:text="0.0"
         android:id="@+id/latitude"
@@ -98,29 +92,9 @@
 
 
 
-    <TextView
-        android:id="@+id/id_value2"
-        android:text="[id]"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_below="@+id/TextView02"
-       />
 
-    <TextView
-        android:id="@+id/content_value2"
-        android:text="[content]"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/id_value2"
-        />
-    <TextView
-        android:id="@+id/content_value3"
-        android:text="[content]"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView02"
-        />
+
+
 
 
 

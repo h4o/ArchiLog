@@ -43,6 +43,9 @@ public class MusicStorageVerticle extends AbstractVerticle {
         router.get("/musicStore/add/").handler(routingContext -> {
            routingContext.response().sendFile(fileToServe);
         });
+        router.get("/musicRequest")
+                .produces("application/json")
+                .handler(MusicRequestHandler::requestAllMusic);
         router.post("/musicStore/add/")
                 .produces("application/json")
                 .handler(MusicRequestHandler::handlePostMusic);
@@ -64,7 +67,7 @@ public class MusicStorageVerticle extends AbstractVerticle {
         JsonObject config = new JsonObject();
         String uri = config.getString("mongo_uri");
         if (uri == null) {
-            uri = "mongodb://mongo:27017";
+            uri = "mongodb://localhost:27017";
         }
         String db = config.getString("mongo_db");
         if (db == null) {
