@@ -5,7 +5,7 @@ var router = express.Router();
 
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
-var auth = 'BQCm-wTBWMtXlOHiCB_2Ev-nTVkiikTDhgpsAT1xftjaPxHBAgAXeP6Efatxb7TLpracwsFywEGoC3vxy2G_cqawCuIT2zhnd3ocxm69-XrQz_wX0E07agcwegl706OyVbs6_U1HWGrrOg'
+var auth = 'BQCeM0ZIKRjjvrgSGWqZWdCz1IXaqJ3YgBPkJrAzjZtWgBeHQw8jkBP9ntMgP46UWg45CTf8UlPz6TEQK3UG452b0v3Hx5jDyiwyslS_0G_AbAdzRHCMcAY-hI98xaBNvTwzeuEGpUaAtQ'
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
@@ -39,7 +39,7 @@ router.get('/search', function(req, res) {
     var query = url_parts.query;
     var track_name = query.track;
     var artist_name = query.artist;
-    artist_name = "Metallica";
+  //  artist_name = "Metallica";
 
     // search for song by name and artist  
     request.get(track_search_API + track_name + "&type=" + SEARCH_TYPE, function(error, rest, body) {

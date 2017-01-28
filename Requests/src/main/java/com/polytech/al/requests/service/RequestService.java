@@ -64,6 +64,7 @@ public class RequestService {
     @RequestMapping(method = RequestMethod.POST,value = "/add/")
     public void post(@RequestBody String musicName)
     {
+
         //first we request the song and its metadata, sadly we'll mock it for now
         Song s = new Song(musicName,new Random().nextInt(120)+60,0);//iteration is set to 0 for now
         //then we request information to synchro about what point in the playlist we are
