@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: MusicStore
+
+eureka:
+  instance:
+      statusPageUrl: http://localhost/info
+      healthCheckUrl: http://localhost/health
+      homePageUrl: http://localhost
+      hostname: localhost
+      non-secure-port: 8080
+  client:
+    serviceUrl:
+      defaultZone: loca
