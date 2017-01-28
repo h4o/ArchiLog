@@ -49,7 +49,7 @@ public class EurekaWorkerVerticle extends AbstractVerticle {
         System.out.println("config");
 
         System.out.println(configInstance.getStringProperty("eureka.serviceUrl.default","NONE"));
-        ApplicationInfoManager applicationInfoManager = initializeApplicationInfoManager(new MyDataCenterInstanceConfig());
+        ApplicationInfoManager applicationInfoManager = initializeApplicationInfoManager(new DataCenterConfig());
         EurekaClient eurekaClient = initializeEurekaClient(applicationInfoManager, new DefaultEurekaClientConfig());
         System.out.println("Registering service to eureka with STARTING status");
         applicationInfoManager.setInstanceStatus(InstanceInfo.InstanceStatus.STARTING);
