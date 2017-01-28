@@ -5,7 +5,7 @@ var router = express.Router();
 
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
-var auth = 'BQCeM0ZIKRjjvrgSGWqZWdCz1IXaqJ3YgBPkJrAzjZtWgBeHQw8jkBP9ntMgP46UWg45CTf8UlPz6TEQK3UG452b0v3Hx5jDyiwyslS_0G_AbAdzRHCMcAY-hI98xaBNvTwzeuEGpUaAtQ'
+var auth = 'BQBAK3LyTQ6NJNVz-ZzGIpBxNW74U-5wGcAIUAKwO7Cm3r8iFfXdwaHvVoTiMrQGnBGp7Sy0AoL5jpPJ7k3Wu0QxKh01GkIqz7vyRsuF2ELJXvUiB3mZ7IF9td7hPHQMrDUFgHRPqJfDeg'
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
@@ -15,7 +15,9 @@ var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 /* GET home page. */
 
-var metadata_request_options = {
+
+router.get('/search', function(req, res) {
+	var metadata_request_options = {
     url: 'https://api.spotify.com/v1/audio-features/',
     headers: {
         'User-Agent': 'request',
@@ -34,7 +36,7 @@ var album_request_options = {
     }
 };
 
-router.get('/search', function(req, res) {
+
     var url_parts = url.parse(req.url, true);
     var query = url_parts.query;
     var track_name = query.track;
@@ -52,13 +54,12 @@ router.get('/search', function(req, res) {
                 if (!error && response.statusCode == 200) {
                     var result = {};
                     result.metadata = body;
-                    // console.log(result.metadata);
-                    // use genre to get genre
                     album_request_options.url = album_request_options.url + track_info.album_id + '?market=FR';
+
                     request.get(album_request_options,function(error,response,body){
                     	body = JSON.parse(body);
                     	result.genres = body.genres;
-                    	console.log(result)
+                    	// console.log(result)
                     	res.send(result);	
                     }) 
                 }
@@ -87,7 +88,7 @@ function filter_tracks(body, artist_name) {
         if (has_artist(items[item].artists, artist_name)) {
             track_info.track_id = items[item].id;
             track_info.album_id = items[item].album.id;
-            console.log(track_info)
+            // console.log(track_info)
             return track_info;
         }
     }

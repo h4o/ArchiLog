@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity
         displaySelectedScreen(R.id.nav_genres);
     }
 
-    @Override
+    /*@Override
     protected void onStart() {
         super.onStart();
         new HttpRequestTask().execute();
-    }
+    }*/
 
     @Override
     public void onBackPressed() {
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, Greeting> {
+   /* private class HttpRequestTask extends AsyncTask<Void, Void, Greeting> {
         @Override
         protected Greeting doInBackground(Void... params) {
             try {
@@ -167,6 +167,6 @@ public class MainActivity extends AppCompatActivity
             greetingContentText.setText(greeting.getContent());
         }
 
-    }
+    }*/
 
 }

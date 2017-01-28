@@ -239,51 +239,6 @@ public class Menu1 extends Fragment  {
             // permissions this app might request
         }
     }
-    @Override
-   public void onStart() {
-        super.onStart();
-        new HttpRequestTask().execute();
-    }
-
-    private class HttpRequestTask extends AsyncTask<Void, Void, Greeting> {
-
-        @Override
-        protected Greeting doInBackground(Void... params) {
-            try {
-                final String url = "http://rest-service.guides.spring.io/greeting";
-                RestTemplate restTemplate = new RestTemplate();
-                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Greeting greeting = restTemplate.getForObject(url, Greeting.class);
-                //ResponseEntity<Greeting> responseEntity = restTemplate.postForEntity(url,new Greeting(),Greeting.class);
-
-                Log.e("MainActivity",greeting+"");
-                return greeting;
-            } catch (Exception e) {
-                Log.e("MainActivity", e.getMessage(), e);
-            }
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Greeting greeting) {
-           // TextView greetingContentText = (TextView) findViewById(R.id.content_value3);
-
-            Log.e("MainActivity est bien ",greeting.getContent());
-            test=greeting.getContent();
-
-            Toast.makeText(getContext(), test + "récuperé ! " , Toast.LENGTH_LONG).show();
-
-            TextView greetingContentText = (TextView) getView().findViewById(R.id.content_value3);
-            greetingContentText.setText(test);
-
-
-
-
-        }
-
-
-    }
 
 
 }

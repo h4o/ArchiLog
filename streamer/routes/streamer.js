@@ -41,8 +41,8 @@ const client = new Eureka({
     },
   },
   eureka: {
-    host: 'al-discovery.herokuapp.com',
-    port: 80,
+    host: 'localhost',
+    port: 8761,
     servicePath: '/eureka/apps/',
 },
 });
