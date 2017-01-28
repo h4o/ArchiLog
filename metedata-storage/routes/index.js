@@ -5,6 +5,8 @@ var router = express.Router();
 
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
+var auth = 'BQCeM0ZIKRjjvrgSGWqZWdCz1IXaqJ3YgBPkJrAzjZtWgBeHQw8jkBP9ntMgP46UWg45CTf8UlPz6TEQK3UG452b0v3Hx5jDyiwyslS_0G_AbAdzRHCMcAY-hI98xaBNvTwzeuEGpUaAtQ'
+var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
 //http://localhost:3000/search?track=one
@@ -14,71 +16,94 @@ var SEARCH_TYPE = "track";
 /* GET home page. */
 
 var metadata_request_options = {
-  url: 'https://api.spotify.com/v1/audio-features/',
-  headers: {
-    'User-Agent': 'request',
-    'Accept': 'application/json',
-    'Authorization':'Bearer '+ 'BQBuiI7ausOno3nPCMOPGPKUTWJ-B4Nk8JO3Rn633ZGkhLyMw8H07KqojR82-x96LnliUE0NqV5OgVW7xswqVSwr07ryBFHMpGbpypJtbNo-vZQ5twpnLzbbIha0Pk7KSyif90lVS2MmAQ'
-  }
+    url: 'https://api.spotify.com/v1/audio-features/',
+    headers: {
+        'User-Agent': 'request',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + auth
+    }
+};
+
+
+var album_request_options = {
+    url: 'https://api.spotify.com/v1/albums/',
+    headers: {
+        'User-Agent': 'request',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + auth
+    }
 };
 
 router.get('/search', function(req, res) {
-	var url_parts = url.parse(req.url, true);
-	var query = url_parts.query;
-	var track_name = query.track;
-	var artist_name = query.artist;
-	artist_name="Metallica";
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+    var track_name = query.track;
+    var artist_name = query.artist;
+  //  artist_name = "Metallica";
 
-// https://api.spotify.com/v1/search?q=one&type=track
-	request.get(track_search_API+track_name+"&type="+SEARCH_TYPE,function (error,rest,body) {
-      if (!error && rest.statusCode == 200) {
-      	
-      	var songId = filter_tracks(JSON.parse(body),artist_name);
-      	metadata_request_options.url =metadata_request_options.url+'06AKEBrKUckW0KREUWRnvT';
+    // search for song by name and artist  
+    request.get(track_search_API + track_name + "&type=" + SEARCH_TYPE, function(error, rest, body) {
+        if (!error && rest.statusCode == 200) {
+            var track_info = filter_tracks(JSON.parse(body), artist_name);
 
-      	request(metadata_request_options,function(error, response, body){
-  			if (!error && response.statusCode == 200) {
-  			console.log(body)
-  			res.send(body);
-  			}
-		});
-      }});
+            // use track id to get metadata
+            metadata_request_options.url = metadata_request_options.url + track_info.track_id;
+            request(metadata_request_options, function(error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    var result = {};
+                    result.metadata = body;
+                    // console.log(result.metadata);
+                    // use genre to get genre
+                    album_request_options.url = album_request_options.url + track_info.album_id + '?market=FR';
+                    request.get(album_request_options,function(error,response,body){
+                    	body = JSON.parse(body);
+                    	result.genres = body.genres;
+                    	console.log(result)
+                    	res.send(result);	
+                    }) 
+                }
+            });
+        }
+    });
 
 
 
-// request.get('https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT', {
-//   'auth': {
-//     'bearer': 'bearerToken'
-//   }
-// });
-// metadata_request_options.url =metadata_request_options.url+'06AKEBrKUckW0KREUWRnvT';
+    // request.get('https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT', {
+    //   'auth': {
+    //     'bearer': 'bearerToken'
+    //   }
+    // });
+    // metadata_request_options.url =metadata_request_options.url+'06AKEBrKUckW0KREUWRnvT';
 
-// https://api.spotify.com/v1/search?q=one&type=track
-	//track_search_API
-  // res.render('index', { title: 'Express' });
+    // https://api.spotify.com/v1/search?q=one&type=track
+    //track_search_API
+    // res.render('index', { title: 'Express' });
 });
 
-function filter_tracks(body,artist_name){
-	
-	var items = body.tracks.items;
-	for (item in items){
-		if(has_artist(items[item].artists,artist_name)){
-			return items[item].id;
-		}
-	}
-	return null;
+function filter_tracks(body, artist_name) {
+    var track_info={};
+    var items = body.tracks.items;
+    for (item in items) {
+        if (has_artist(items[item].artists, artist_name)) {
+            track_info.track_id = items[item].id;
+            track_info.album_id = items[item].album.id;
+            console.log(track_info)
+            return track_info;
+        }
+    }
+    return null;
 
 }
 
-function has_artist(artists,artist_name){
-	for(artist in artists){
-		// console.log(artists[artist].name);
-		if(artists[artist].name === artist_name){
-			return true;
+function has_artist(artists, artist_name) {
+    for (artist in artists) {
+        // console.log(artists[artist].name);
+        if (artists[artist].name === artist_name) {
+            return true;
 
-		}
-	}
-	return false;
+        }
+    }
+    return false;
 }
 
 module.exports = router;
