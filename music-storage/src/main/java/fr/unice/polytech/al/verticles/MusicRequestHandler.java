@@ -1,7 +1,9 @@
 package fr.unice.polytech.al.verticles;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import io.vertx.core.file.AsyncFile;
 import io.vertx.core.file.OpenOptions;
+import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.streams.Pump;
 import io.vertx.ext.mongo.MongoClient;
@@ -28,7 +30,34 @@ public class MusicRequestHandler {
             pump.start();
         });
     }
+    public static void requestAllMusic(RoutingContext rc){
+        System.out.println("Request all music");
+        JsonObject config = new JsonObject();
+        //hope it's already configured
+        MongoClient client = MongoClient.createShared(rc.vertx(),config);
+        JsonObject query = new JsonObject();
+        client.find("musics",query, listAsyncResult -> {
+            System.out.println("something happened !!"+listAsyncResult);
+            if(listAsyncResult.succeeded()){
+                if(listAsyncResult.result().size() > 0) {
 
+                    JsonArray array = new JsonArray(listAsyncResult.result());
+                    JsonObject obj = new JsonObject();
+                    obj.put("results",array);
+                    System.out.println("found something");
+                    rc.response().end(obj.encodePrettily());
+                }
+                else {
+                    System.out.println("found nothing :(");
+                    rc.response().end();
+                }
+            } else {
+                rc.response().end("Failure");
+            }
+
+        });
+
+    }
 
     public static void requestMusicById(RoutingContext rc){
         System.out.println("RequestMusicById");
@@ -36,14 +65,19 @@ public class MusicRequestHandler {
         //hope it's already configured
         MongoClient client = MongoClient.createShared(rc.vertx(),config);
         JsonObject query = new JsonObject();
-
-        client.find("music",query, listAsyncResult -> {
+        System.out.println(rc.request().getParam("id"));
+        query.put("_id",rc.request().getParam("id"));
+        client.find("musics",query, listAsyncResult -> {
             System.out.println("something happened !!"+listAsyncResult);
             if(listAsyncResult.succeeded()){
-                if(listAsyncResult.result().size() > 0)
-                    rc.response().end(listAsyncResult.result().get(0).encode());
-                else
+                if(listAsyncResult.result().size() > 0) {
+                    System.out.println("found something");
+                    rc.response().end(listAsyncResult.result().get(0).encodePrettily());
+                }
+                else {
+                    System.out.println("found nothing :(");
                     rc.response().end();
+                }
             } else {
                 rc.response().end("Failure");
             }
