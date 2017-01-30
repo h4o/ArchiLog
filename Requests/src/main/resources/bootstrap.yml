@@ -12,3 +12,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL}
+METADATA:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: al-metadata.herokuapp.com

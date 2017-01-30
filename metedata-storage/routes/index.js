@@ -5,7 +5,7 @@ var router = express.Router();
 
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
-var auth = 'BQBAK3LyTQ6NJNVz-ZzGIpBxNW74U-5wGcAIUAKwO7Cm3r8iFfXdwaHvVoTiMrQGnBGp7Sy0AoL5jpPJ7k3Wu0QxKh01GkIqz7vyRsuF2ELJXvUiB3mZ7IF9td7hPHQMrDUFgHRPqJfDeg'
+var auth = 'BQCCksLgJKb2yXKmIRKzBqL2YCjAIRqkXfxsMztUetYkC4otDbKfr6hEhrlBwz5PzcjNd_lWEz_mWzloxe_0pB_6p47hFU3njTaG9trv-dW-1_1Dc-MweAw9sAH7vvaPgR834w'
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
@@ -15,6 +15,9 @@ var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 /* GET home page. */
 
+router.get('/test/:maman/:papa',function(req,res){
+    res.send('dindjdjbdk');
+});
 
 router.get('/search', function(req, res) {
 	var metadata_request_options = {
@@ -53,7 +56,7 @@ var album_request_options = {
             request(metadata_request_options, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var result = {};
-                    result.metadata = body;
+                    result.metadata = JSON.parse(body);
                     album_request_options.url = album_request_options.url + track_info.album_id + '?market=FR';
 
                     request.get(album_request_options,function(error,response,body){
