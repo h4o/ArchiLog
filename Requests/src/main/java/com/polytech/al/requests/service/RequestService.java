@@ -76,7 +76,7 @@ public class RequestService {
         //first we request the song and its metadata, sadly we'll mock it for now
         Song s = new Song(musicName,new Random().nextInt(120)+60,0);//iteration is set to 0 for now
         //then we request information to synchro about what point in the playlist we are
-        //System.out.println(metadataClient.getMetadata("one","Metallica"));
+        System.out.println(metadataClient.getMetadata("one","Metallica"));
         // GETing zone ID by genre, genre hardcoded for now
         String genre = "METAL";
         String zoneId = zonesClient.getZoneId(genre);

@@ -56,7 +56,7 @@ var artist_request_options = {
             request(metadata_request_options, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var result = {};
-                    result.metadata = body;
+                    result.metadata = JSON.parse(body);
                     artist_request_options.url = artist_request_options.url + track_info.artist_id;
                         console.log(artist_request_options.url)
                     request.get(artist_request_options,function(error,response,body){

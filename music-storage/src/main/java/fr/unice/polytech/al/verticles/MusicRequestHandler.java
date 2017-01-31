@@ -45,7 +45,7 @@ public class MusicRequestHandler {
                     JsonObject obj = new JsonObject();
                     obj.put("results",array);
                     System.out.println("found something");
-                    rc.response().putHeader("ContentType","application/json");
+                    rc.response().putHeader("Content-Type","application/json");
                     rc.response().end(obj.encodePrettily());
                 }
                 else {
@@ -73,10 +73,12 @@ public class MusicRequestHandler {
             if(listAsyncResult.succeeded()){
                 if(listAsyncResult.result().size() > 0) {
                     System.out.println("found something");
+                    rc.response().putHeader("Content-Type","application/json");
                     rc.response().end(listAsyncResult.result().get(0).encodePrettily());
                 }
                 else {
                     System.out.println("found nothing :(");
+                    rc.response().putHeader("Content-Type","application/json");
                     rc.response().end();
                 }
             } else {
