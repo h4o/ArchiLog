@@ -4,6 +4,38 @@ var http = require('http'),
 
 // Or, if you're not using a transpiler: 
 const Eureka = require('eureka-js-client').Eureka;
+
+
+
+
+/* a mettre apres dans app.js ou sur un autre fichier et utiliser 
+module.exports */
+const client = new Eureka({
+  instance: {
+    app: 'Metadata',
+    hostName: 'al-discovery.herokuapp.com',
+    //ipAddr: '127.0.0.1',
+    statusPageUrl:  process.env.selfUrl || 'http://al-discovery.herokuapp.com',
+    healthCheckUrl: process.env.selfUrl+'/health' || 'http://al-discovery.herokuapp.com/health',
+    port: {
+      '$': 3001,
+      '@enabled': true,
+    },
+      vipAddress: 'Metadata',
+    dataCenterInfo: {
+      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
+      name: 'MyOwn',
+    },
+  },
+  eureka: {
+    host: process.env.eurekaUrl || 'al-discovery.herokuapp.com',
+    port: process.env.eurekaPort || 80,
+    servicePath: process.env.eurekaPath || '/eureka/apps/',
+  },
+});
+
+client.start();
+
 var request = require('request');
 // example configuration 
 var express = require('express');

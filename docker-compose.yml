@@ -1,60 +1,68 @@
 version: "2.0"
 services:
-  zones:
-    build: ./zones/src/main/docker/
-    ports:
-      - "8081:8080"
-    links:
-        - mongodb:db
-        - discovery:eureka
-    environment:
-      - SELF_URL=zones
-      - EUREKA_URL=http://eureka:8761/eureka/
-      - HTTP_PROTOCOL=http
-      - NON_SECURE_PORT=8080
-  playlists:
-    build: ./Playlists/src/main/docker/
-    ports:
-      - "8080:8080"
-    links:
-      - mongodb:db
-      - discovery:eureka
-    environment:
-      - SELF_URL=playlists
-      - EUREKA_URL=http://eureka:8761/eureka/
-      - HTTP_PROTOCOL=http
-      - NON_SECURE_PORT=8080 
+#  zones:
+#    build: ./zones/src/main/docker/
+#    ports:
+#      - "8081:8080"
+#    links:
+#        - mongodb:db
+#        - discovery:eureka
+#    environment:
+#      - SELF_URL=zones
+#      - EUREKA_URL=http://eureka:8761/eureka/
+#      - HTTP_PROTOCOL=http
+#      - NON_SECURE_PORT=8080
+#  playlists:
+#    build: ./Playlists/src/main/docker/
+#    ports:
+#      - "8080:8080"
+#    links:
+#      - mongodb:db
+#      - discovery:eureka
+#    environment:
+#      - SELF_URL=playlists
+#      - EUREKA_URL=http://eureka:8761/eureka/
+#      - HTTP_PROTOCOL=http
+#      - NON_SECURE_PORT=8080
   requests:
     build: ./Requests/src/main/docker/
     ports:
       - "8085:8080"
     links:
       - mongodb:db
-      - discovery:eureka
-      - synchro
-      - zones
+     # - discovery:eureka
+#      - synchro
+#      - zones
     environment:
-      - SELF_URL=requests
-      - EUREKA_URL=http://eureka:8761/eureka/
-      - HTTP_PROTOCOL=http
-      - NON_SECURE_PORT=8080 
-  synchro:
-    build: ./Synchro/src/main/docker/
-    ports:
-      - "8090:8080"
-    links:
-      - mongodb:db
-      - discovery:eureka
-      - playlists
-    environment:
-      - SELF_URL=synchro
-      - EUREKA_URL=http://eureka:8761/eureka/
-      - HTTP_PROTOCOL=http 
-      - NON_SECURE_PORT=8080
-  discovery:
-    build: ./eureka-service/src/main/docker/
-    ports:
-      - "8761:8761"
+      - SELF_URL=al-playlists.herokuapp.com
+      - EUREKA_URL=https://al-discovery.herokuapp.com/eureka/
+      - HTTP_PROTOCOL=https
+      - NON_SECURE_PORT=80 
+#  synchro:
+#    build: ./Synchro/src/main/docker/
+#    ports:
+#      - "8090:8080"
+#    links:
+#      - mongodb:db
+#      - discovery:eureka
+#      - playlists
+#    environment:
+#      - SELF_URL=synchro
+#      - EUREKA_URL=http://eureka:8761/eureka/
+#      - HTTP_PROTOCOL=http
+#      - NON_SECURE_PORT=8080
+  # discovery:
+  #   build: ./eureka-service/src/main/docker/
+  #   ports:
+  #     - "8761:8761"
+#  metadata:
+#    build:  ./metedata-storage/
+#    ports:
+#      - "3000:3000"
+  # streamer:
+  #     build:  ./streamer/
+  #     ports:
+  #       - "3000:3000"
   mongodb:
     image: mongo
     ports:

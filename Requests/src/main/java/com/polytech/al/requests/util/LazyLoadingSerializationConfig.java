@@ -7,6 +7,8 @@ import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
+import static sun.rmi.transport.TransportConstants.Version;
+import feign.Logger;
 @Configuration
 public class LazyLoadingSerializationConfig {
 
@@ -20,6 +22,11 @@ public class LazyLoadingSerializationConfig {
         om.registerModule(module);
 
         return om;
+    }
+
+    @Bean
+    public Logger.Level feignLoggerLevel() {
+        return Logger.Level.FULL;
     }
 
 }
