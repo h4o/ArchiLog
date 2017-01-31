@@ -8,3 +8,5 @@ var server = app.listen(app.get('port'), function() {
 });
 
 io.listen(server);
+
+module.exports = io;

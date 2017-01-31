@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var io = require('socket.io')
+var io = require('../bin/www');
 var fileSystem = require('fs'),
 path = require('path');
 const Eureka = require('eureka-js-client').Eureka;
