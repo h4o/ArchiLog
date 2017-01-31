@@ -5,7 +5,8 @@ var router = express.Router();
 
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
-var auth = 'BQCCksLgJKb2yXKmIRKzBqL2YCjAIRqkXfxsMztUetYkC4otDbKfr6hEhrlBwz5PzcjNd_lWEz_mWzloxe_0pB_6p47hFU3njTaG9trv-dW-1_1Dc-MweAw9sAH7vvaPgR834w'
+var auth = 'BQBm0Lx2gYBlq07NDCc4ybUBmdYZDxDO2oTvplXVlKeQwNv7PIcMCbV53Cd-qo6gfQLzsgSunobluQYOXD0WMwiSKFxWZfMSJUxqHXSLgfjzlFm16e6E9VyAA9pgUbfQhGHzHqmQwVvMwA'
+
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
@@ -30,12 +31,12 @@ router.get('/search', function(req, res) {
 };
 
 
-var album_request_options = {
-    url: 'https://api.spotify.com/v1/albums/',
+var artist_request_options = {
+    url: 'https://api.spotify.com/v1/artists/',
     headers: {
         'User-Agent': 'request',
         'Accept': 'application/json',
-        'Authorization': 'Bearer ' + auth
+        // 'Authorization': 'Bearer ' + auth
     }
 };
 
@@ -56,13 +57,14 @@ var album_request_options = {
             request(metadata_request_options, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var result = {};
-                    result.metadata = JSON.parse(body);
-                    album_request_options.url = album_request_options.url + track_info.album_id + '?market=FR';
-
-                    request.get(album_request_options,function(error,response,body){
+                    result.metadata = body;
+                    artist_request_options.url = artist_request_options.url + track_info.artist_id;
+                        console.log(artist_request_options.url)
+                    request.get(artist_request_options,function(error,response,body){
+                        // console.log(body)
                     	body = JSON.parse(body);
                     	result.genres = body.genres;
-                    	// console.log(result)
+                    	console.log(result)
                     	res.send(result);	
                     }) 
                 }
@@ -90,7 +92,7 @@ function filter_tracks(body, artist_name) {
     for (item in items) {
         if (has_artist(items[item].artists, artist_name)) {
             track_info.track_id = items[item].id;
-            track_info.album_id = items[item].album.id;
+            track_info.artist_id = items[item].artists[0].id;
             // console.log(track_info)
             return track_info;
         }
