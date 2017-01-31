@@ -6,6 +6,7 @@ var router = express.Router();
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
 var auth = 'BQBm0Lx2gYBlq07NDCc4ybUBmdYZDxDO2oTvplXVlKeQwNv7PIcMCbV53Cd-qo6gfQLzsgSunobluQYOXD0WMwiSKFxWZfMSJUxqHXSLgfjzlFm16e6E9VyAA9pgUbfQhGHzHqmQwVvMwA'
+
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
@@ -15,6 +16,9 @@ var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 /* GET home page. */
 
+router.get('/test/:maman/:papa',function(req,res){
+    res.send('dindjdjbdk');
+});
 
 router.get('/search', function(req, res) {
 	var metadata_request_options = {
@@ -56,7 +60,6 @@ var artist_request_options = {
                     result.metadata = body;
                     artist_request_options.url = artist_request_options.url + track_info.artist_id;
                         console.log(artist_request_options.url)
-
                     request.get(artist_request_options,function(error,response,body){
                         // console.log(body)
                     	body = JSON.parse(body);

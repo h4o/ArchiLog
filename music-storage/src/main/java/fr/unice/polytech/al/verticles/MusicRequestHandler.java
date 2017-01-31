@@ -45,6 +45,7 @@ public class MusicRequestHandler {
                     JsonObject obj = new JsonObject();
                     obj.put("results",array);
                     System.out.println("found something");
+                    rc.response().putHeader("ContentType","application/json");
                     rc.response().end(obj.encodePrettily());
                 }
                 else {

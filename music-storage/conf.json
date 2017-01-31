@@ -1,0 +1,10 @@
+{
+"eureka.name":"localhost",
+"eureka.port":"8761",
+"eureka.serviceUrl.default":"http://localhost:8761/eureka/v2/",
+"eureka.registration.enabled":"true",
+"eureka.vipAddress":"musicstore"
+}
+
+java -jar target/music-storage-1.0-SNAPSHOT-fat.jar --conf conf.json -Deureka.serviceUrl.default=https://al-discovery.herokuapp.com/eureka/
+ -Deureka.vipAddress=musicstore -Deureka.port==80 -Deureka.name=al-discovery.herokuapp.com -Deureka.registration.enable=true -Dspring.application.name=musicstore -Deureka.instance.hostname=test

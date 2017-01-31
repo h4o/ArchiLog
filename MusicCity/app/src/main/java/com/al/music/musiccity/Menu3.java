@@ -13,13 +13,16 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,12 +38,15 @@ public class Menu3 extends Fragment  {
     String a ;
     ListView lv;
     SearchView sv;
-    List<String> music = new ArrayList<String>();
+    List<Music> music = new ArrayList<Music>();
     List<String> musicArtiste = new ArrayList<String>();
     List<String> musicNom = new ArrayList<String>();
-    ArrayAdapter<String> adapter;
-
-    Button getMusic;
+    List<String> musicId = new ArrayList<String>();
+    ArrayAdapter<Music> adapter;
+    Music mSchedule=new Music();
+    String textEnvoyer;
+    Button scheduleMusic;
+    EditText GenreText;
 
 
 
@@ -59,13 +65,18 @@ public class Menu3 extends Fragment  {
         protected Musics doInBackground(Void... params) {
             try {
                 final String url = "http://46.101.31.80:8080/musicRequest";
+                final String urlPost="http://al-request.herokuapp.com/request/add";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Musics greeting = restTemplate.getForObject(url, Musics.class);
-                //ResponseEntity<Greeting> responseEntity = restTemplate.postForEntity(url,new Greeting(),Greeting.class);
+                Musics music_t = restTemplate.getForObject(url, Musics.class);
 
-                Log.e("MainActivity",greeting+"");
-                return greeting;
+//****************schedule **************************//
+            //  Musics music_p = restTemplate.postForObject(urlPost,textEnvoyer, Musics.class);
+
+               // Boolean responseEntity = restTemplate.postForObject(url,"issam",Boolean.class);
+              //  Log.d("MainActivity",responseEntity+"");
+                Log.e("MainActivity",music_t+"");
+                return music_t;
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -75,57 +86,99 @@ public class Menu3 extends Fragment  {
 
 
         @Override
-        protected void onPostExecute(Musics greeting) {
-            // TextView greetingContentText = (TextView) findViewById(R.id.content_value3);
+        protected void onPostExecute(Musics music_t) {
 
-           // Log.e("MainActivity est bien ",greeting.getGenres().toString());
-           // teams=greeting.getGenres();
-
+        /*   *//*******récuperer la liste de ID   ***************//*
+            for (int i = 1;i <=  music_t.getMusics().size()-1;i++){
+                musicId.add(music_t.getMusics().get(i).get_id());
+            }
+            *//*******récuperer la liste de Nom  ***************//*
            // Toast.makeText(getContext(),greeting.getMusics().get(1).getName() + "récuperé ! " , Toast.LENGTH_LONG).show();
-            for (int i = 1;i <=  greeting.getMusics().size()-1;i++){
-                musicNom.add(greeting.getMusics().get(i).getName());
+            for (int i = 1;i <=  music_t.getMusics().size()-1;i++){
+                musicNom.add(music_t.getMusics().get(i).getName());
+            }
+            *//*******récuperer la liste de Artiste  ***************//*
+            for (int i = 1;i <=  music_t.getMusics().size()-1;i++){
+                musicArtiste.add(music_t.getMusics().get(i).getArtist());
             }
 
-            for (int i = 1;i <=  greeting.getMusics().size()-1;i++){
-                musicArtiste.add(greeting.getMusics().get(i).getArtist());
+
+
+            Toast.makeText(getContext(),"Liste of music found and added " , Toast.LENGTH_LONG).show();
+
+
+             *//*******Fusionner la liste de NOM et la liste d Artiste pour l'affichage  ***************//*
+            ArrayList<String> music = new ArrayList<String>(music_t.getMusics().size()); // Make a new list
+            for (int i = 1; i < music_t.getMusics().size()-1; i++) { // Loop through every name/phone number combo
+               music.add(musicNom.get(i) + "  " + musicId.get(i)); // Concat the two, and add it
+            }
+*/
+            ArrayList<String> music = new ArrayList<String>(music_t.getMusics().size());
+            for (int i = 1;i <=  music_t.getMusics().size()-1;i++){
+                music.add(music_t.getMusics().get(i).getName());
             }
 
+            adapter.clear();
+            adapter.addAll(music_t.getMusics());
 
 
-            Toast.makeText(getContext(),"Liste de music trouvée  " , Toast.LENGTH_LONG).show();
-           // adapter.clear();
-
-            ArrayList<String> music = new ArrayList<String>(greeting.getMusics().size()); // Make a new list
-            for (int i = 1; i < greeting.getMusics().size()-1; i++) { // Loop through every name/phone number combo
-               music.add(musicNom.get(i) + " || " + musicArtiste.get(i)); // Concat the two, and add it
-            }
-          //  Toast.makeText(getContext(),musicNom.toString() + "récuperé ! " , Toast.LENGTH_LONG).show();
-
-
-            adapter.addAll(music);
-
-          //  adapter.clear();
-           // adapter.addAll(teams);
-            //  test=greeting.getContent();
-
-            // Toast.makeText(getContext(),greeting.getGenres().toString() + "récuperé ! " , Toast.LENGTH_LONG).show();
-
-            //  TextView greetingContentText = (TextView) getView().findViewById(R.id.content_value3);
-            //  greetingContentText.setText(test);
-
-            // teams=greeting.getGenres();
-            //  Toast.makeText(getContext(),teams.toString() + "récuperé dans teams ! " , Toast.LENGTH_LONG).show();
 
 
 
         }
 
 
+
+
+
+        }
+
+
+
+    private class HttpRequestTask2 extends AsyncTask<Void, Void, Musics> {
+
+        @Override
+        protected Musics doInBackground(Void... params) {
+            try {
+              //  final String url = "http://46.101.31.80:8080/musicRequest";
+                final String urlPost="http://al-requests.herokuapp.com/requests/add/";
+                RestTemplate restTemplate = new RestTemplate();
+                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+                String ret =  restTemplate.postForObject(urlPost,textEnvoyer, String.class);
+                Toast.makeText(getContext(),"Scheduled the track !",Toast.LENGTH_LONG).show();
+//****************schedule **************************//
+               // Toast.makeText(getContext(), textEnvoyer , Toast.LENGTH_LONG).show();
+             //     Musics music_p = restTemplate.postForObject(urlPost,textEnvoyer, Musics.class);
+
+                // Boolean responseEntity = restTemplate.postForObject(url,"issam",Boolean.class);
+                //  Log.d("MainActivity",responseEntity+"");
+              //  Log.e("MainActivity",music_t+"");
+                return null;
+            } catch (Exception e) {
+                Log.e("MainActivity", e.getMessage(), e);
+            }
+
+            return null;
+        }
+
+
+        @Override
+        protected void onPostExecute(Musics music_t) {
+
+
+
+           // Toast.makeText(getContext(),"music schedule  " , Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), textEnvoyer +"est schedule" , Toast.LENGTH_LONG).show();
+
+
+
+        }
+
+
+
+
+
     }
-
-
-
-
 
 
 
@@ -144,23 +197,62 @@ public class Menu3 extends Fragment  {
         getActivity().setTitle("Schedule Music");
         lv = (ListView) view.findViewById(R.id.listMusic);
        sv = (SearchView) view.findViewById(R.id.searchMusic);
-        final TextView GenreText = (TextView) view.findViewById(R.id.m);
+        GenreText = (EditText) view.findViewById(R.id.m);
+        textEnvoyer = GenreText.getText().toString();
 
-        adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, music);
+        adapter = new ArrayAdapter<Music>(getContext(), android.R.layout.simple_list_item_1, music);
         lv.setAdapter(adapter);
 
-       /*// sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-        getMusic = (Button) view.findViewById(R.id.getListMusic);
-        getMusic.setOnClickListener(new View.OnClickListener() {
+       // sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        scheduleMusic = (Button) view.findViewById(R.id.scheduleMusic);
+        scheduleMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
+
+                /*EditText t = (EditText) getView().findViewById(R.id.m);
+                String textEnvoyer = t.getText().toString();
+                // do something
+                Toast.makeText(getContext(), textEnvoyer, Toast.LENGTH_LONG).show();*/
+               // Toast.makeText(getContext(),"cliquer", Toast.LENGTH_LONG).show();
+
+
+
+                new HttpRequestTask2().execute();
+
+
+            }
+        });
+
+       /* lv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
                 // do something
-                Toast.makeText(getContext(), "your list is added now!", Toast.LENGTH_LONG).show();
-               // music.add("issam");
+                Toast.makeText(getContext(), "t as cliqué!", Toast.LENGTH_LONG).show();
+                // music.add("issam");
 
             }
         });*/
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0,
+                                    View arg1, int position, long id) {
+                //le code à effectuer suite à un click
+                Toast.makeText(getContext(),music.get(position) +" is chosen !", Toast.LENGTH_LONG).show();
+                GenreText.setText(music.get(position).toString());
+                Toast.makeText(getContext(), music.get(position).toString(), Toast.LENGTH_LONG).show();
+
+                textEnvoyer = music.get(position)._id;
+
+
+
+            }
+        });
+
+
+
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String text) {
@@ -175,6 +267,7 @@ public class Menu3 extends Fragment  {
 
                 Toast.makeText(getContext(), a + " will be shedule" , Toast.LENGTH_LONG).show();
                 GenreText.setText(a);
+                textEnvoyer = GenreText.getText().toString();
 
                 return false;
             }

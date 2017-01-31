@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/searchMusic"/>
 
-    <TextView
+    <EditText
         android:id="@+id/m"
         android:text="choose your kind"
         android:layout_width="fill_parent"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
         android:layout_marginStart="2dp"
-        android:id="@+id/getListMusic"
+        android:id="@+id/scheduleMusic"
         android:layout_below="@id/m"
         />
 </RelativeLayout>
