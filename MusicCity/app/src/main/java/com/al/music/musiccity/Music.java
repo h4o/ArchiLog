@@ -31,6 +31,8 @@ public class Music {
         return length;
     }
 
+    public String toString() {return name + " -- "+ artist;}
+
     public String getBitrate() {
         return bitrate;
     }
