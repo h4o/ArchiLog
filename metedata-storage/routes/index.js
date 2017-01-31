@@ -5,7 +5,7 @@ var router = express.Router();
 
 var track_search_API = "https://api.spotify.com/v1/search?q="
 var SEARCH_TYPE = "track";
-var auth = 'BQCCksLgJKb2yXKmIRKzBqL2YCjAIRqkXfxsMztUetYkC4otDbKfr6hEhrlBwz5PzcjNd_lWEz_mWzloxe_0pB_6p47hFU3njTaG9trv-dW-1_1Dc-MweAw9sAH7vvaPgR834w'
+var auth = 'BQA9hSnOV9LzQwwJjmFhxUJcOyFEeoP-a81Q2o4xnNS2SudKoXROgbBsXk3ltPsDE_XqPRf3zx5amEHWj7nkWm8JPfAHDd-jch-v3g9nKBPd61AK6hUwyh8lv8fCjRPCv09dog'
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 

@@ -1,6 +1,7 @@
 package com.polytech.al.requests.service;
 
 import com.polytech.al.requests.clients.MetadataClient;
+import com.polytech.al.requests.clients.MusicStoreClient;
 import com.polytech.al.requests.clients.SynchroClient;
 import com.polytech.al.requests.clients.ZonesClient;
 import com.polytech.al.requests.data.Song;
@@ -39,6 +40,9 @@ public class RequestService {
     @Autowired
     private MetadataClient metadataClient;
 
+    @Autowired
+    private MusicStoreClient musicStoreClient;
+
 
     @Value("${pusher.appId:not set}")
     private String appId;
@@ -72,10 +76,12 @@ public class RequestService {
         //first we request the song and its metadata, sadly we'll mock it for now
         Song s = new Song(musicName,new Random().nextInt(120)+60,0);//iteration is set to 0 for now
         //then we request information to synchro about what point in the playlist we are
-        System.out.println(metadataClient.getMetadata("one","Metallica"));
+        //System.out.println(metadataClient.getMetadata("one","Metallica"));
         // GETing zone ID by genre, genre hardcoded for now
         String genre = "METAL";
         String zoneId = zonesClient.getZoneId(genre);
+
+        System.out.println(musicStoreClient.getMusicData(musicName));
 //        String zoneId = "0";
 
         Synchro synchroObject = synchro.getSynchro(zoneId);//TODO get the zone by genre (need genre from metadata before)
