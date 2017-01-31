@@ -16,10 +16,10 @@ import java.util.Map;
  */
 
 
-@FeignClient("METADATA")
+@FeignClient(url="al-metadata.herokuapp.com",name="test")
 public interface MetadataClient {
-
-
+    @RequestMapping(value="/synchroZone/0/",method= RequestMethod.GET)
+    String test();
 
     @RequestMapping(value="/search?track={trackName}&artist={artistName}", method = RequestMethod.GET)
     String  getMetadata(@RequestParam("trackName") String trackName, @RequestParam("artistName")String artistName);
