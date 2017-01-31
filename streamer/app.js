@@ -23,8 +23,7 @@ app.use(function(request, response, next) {
   next();
 });
 
-var server = http.Server(app);
-var io = require('socket.io')(server);
+
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -79,5 +78,4 @@ app.use(function(err, req, res, next) {
     });
 });
 
-module.exports =  io;
 module.exports = app;
