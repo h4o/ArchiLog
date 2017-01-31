@@ -3,10 +3,9 @@ var request = require('request');
 var url = require('url');
 var router = express.Router();
 
-var track_search_API = "https://api.spotify.com/v1/search?q="
+var track_search_API = "https://api.spotify.com/v1/search?q=";
 var SEARCH_TYPE = "track";
-var auth = 'BQBm0Lx2gYBlq07NDCc4ybUBmdYZDxDO2oTvplXVlKeQwNv7PIcMCbV53Cd-qo6gfQLzsgSunobluQYOXD0WMwiSKFxWZfMSJUxqHXSLgfjzlFm16e6E9VyAA9pgUbfQhGHzHqmQwVvMwA'
-
+var auth = 'BQDoPvdGsV_15OcUP2Kyn0Tli8QZQaHufKce731IxC4ZZe2EuiLH1cC0miO28Doy0mBrUrtCXJEGAisMxXAmE789gF5XfWvpKhNzj-JdRSA4JXcPtAUeF09K1Byr8a4yqJhYGg';
 var album_genre_API = "https://api.spotify.com/v1/albums/"
 
 
@@ -57,7 +56,7 @@ var artist_request_options = {
             request(metadata_request_options, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var result = {};
-                    result.metadata = body;
+                    result.metadata = JSON.parse(body);
                     artist_request_options.url = artist_request_options.url + track_info.artist_id;
                         console.log(artist_request_options.url)
                     request.get(artist_request_options,function(error,response,body){

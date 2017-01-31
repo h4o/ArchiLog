@@ -1,5 +1,6 @@
 package com.polytech.al.requests.clients;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.polytech.al.requests.data.Synchro;
 import feign.QueryMap;
 import feign.RequestLine;
@@ -22,7 +23,7 @@ public interface MetadataClient {
     String test();
 
     @RequestMapping(value="/search?track={trackName}&artist={artistName}", method = RequestMethod.GET)
-    String  getMetadata(@RequestParam("trackName") String trackName, @RequestParam("artistName")String artistName);
+    Map<String,Object> getMetadata(@RequestParam("trackName") String trackName, @RequestParam("artistName")String artistName);
 
 
 //    @RequestLine("GET /domains/{domainId}/records?name={name}")
