@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var io = require('../app')
 var fileSystem = require('fs'),
 path = require('path');
 const Eureka = require('eureka-js-client').Eureka;
@@ -52,6 +53,8 @@ client.start();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
+
+
     var play;
     //we only sucribe and bind to a channel when streaming
     var channel = pusher.subscribe('my-channel');
@@ -61,6 +64,7 @@ router.get('/', function(req, res) {
           if (!err && resp.statusCode == 200) {
               var parsed_body = JSON.parse(body);
               play = parsed_body.playlist;
+                  io.emit('synchronize',{ status : "ok"});
               console.log(play);
           }
       });
@@ -114,6 +118,10 @@ router.get('/', function(req, res) {
 });
 
 router.get("/genre/:genre",function(req,res){
+
+    io.on('connect',function(socket) {
+      console.log('client listening on socket.');
+  });
   //res.send("get genre "+req.params.genre);
       var play;
     //we only sucribe and bind to a channel when streaming
