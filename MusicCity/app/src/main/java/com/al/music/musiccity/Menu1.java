@@ -123,7 +123,7 @@ public class Menu1 extends Fragment  {
         ((TextView) view.findViewById(R.id.longitude)).setText(String.valueOf(mLocation.getLongitude()));
 
 
-        urlRecuperer = "http://al-music-streamer.herokuapp.com/streamer?latitude=" + String.valueOf(mLocation.getLatitude()) + "&longitude=" + String.valueOf(mLocation.getLongitude());
+        urlRecuperer = "http://46.101.31.80/streamer?latitude=" + String.valueOf(mLocation.getLatitude()) + "&longitude=" + String.valueOf(mLocation.getLongitude());
 
 
         buttonPlay = (Button) view.findViewById(R.id.play);
@@ -143,11 +143,11 @@ public class Menu1 extends Fragment  {
                 try {
                     if (zone1.isChecked()) {
 
-                        mPlayer.setDataSource("http://al-music-streamer.herokuapp.com/streamer?latitude=1&longitude=1");
+                        mPlayer.setDataSource("http://46.101.31.80/streamer?latitude=1&longitude=1");
 
                     }
                     if (zone2.isChecked()) {
-                        mPlayer.setDataSource("http://al-music-streamer.herokuapp.com/streamer?latitude=2&longitude=1");
+                        mPlayer.setDataSource("http://46.101.31.80/streamer?latitude=2&longitude=1");
                     }
                 } catch (IllegalArgumentException e) {
                     Toast.makeText(getContext(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();

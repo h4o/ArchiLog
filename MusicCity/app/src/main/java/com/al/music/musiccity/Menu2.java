@@ -20,12 +20,20 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.github.nkzawa.emitter.Emitter;
+import com.github.nkzawa.socketio.client.IO;
+import com.github.nkzawa.socketio.client.Socket;
+
 
 /**
  * Created by user on 12/01/2017.
@@ -169,13 +177,13 @@ public class Menu2 extends Fragment  {
                 mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
                 try {
-                    mPlayer.setDataSource("http://al-music-streamer.herokuapp.com/streamer/genre/"+a.toUpperCase());
+                    mPlayer.setDataSource("http://46.101.31.80/streamer/genre/"+a.toUpperCase());
                 } catch (IllegalArgumentException e) {
                     Toast.makeText(getContext(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
                 } catch (SecurityException e) {
-                    Toast.makeText(getContext(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Securité!", Toast.LENGTH_LONG).show();
                 } catch (IllegalStateException e) {
-                    Toast.makeText(getContext(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "illegalState!", Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -211,6 +219,8 @@ public class Menu2 extends Fragment  {
             mPlayer.release();
             mPlayer = null;
         }
+        mSocket.disconnect();
+        mSocket.off("new message", onNewMessage);
     }
     public void onResume() {
         super.onResume();
@@ -222,6 +232,50 @@ public class Menu2 extends Fragment  {
     }
 
 
+    private Socket mSocket;
+    {
+        try {
+            mSocket = IO.socket("http://46.101.31.80/");
+        } catch (URISyntaxException e) {
+            Toast.makeText(getContext(), "erreur 1", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+        mSocket.on("sychronize", onNewMessage);
+        mSocket.connect();
+    }
+
+    private Emitter.Listener onNewMessage = new Emitter.Listener() {
+
+
+        @Override
+        public void call(final Object... args) {
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    JSONObject data = (JSONObject) args[0];
+                    String username;
+                    String message;
+                    try {
+                        username = data.getString("username");
+                        message = data.getString("message");
+
+                        mPlayer.stop();
+                        Toast.makeText(getContext(), "new music  ! !!", Toast.LENGTH_LONG).show();
+                        mPlayer.start();
+                    } catch (JSONException e) {
+                        return;
+                    }
+
+                }
+            });
+        }
+    };
 
 
 

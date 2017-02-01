@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var io = require('../app')
 var fileSystem = require('fs'),
 path = require('path');
 const Eureka = require('eureka-js-client').Eureka;
@@ -15,7 +14,7 @@ Pusher.logToConsole = true;
       cluster: 'eu',
       encrypted: true
     });
-
+var io;
 /*
 var request = require('request-promise'); // suffisant si tes entrees et sorties sont des requetes http
 var q = require('q');// check la doc de q
@@ -118,7 +117,8 @@ router.get('/', function(req, res) {
 });
 
 router.get("/genre/:genre",function(req,res){
-
+    console.log('#############');
+    console.log(io);
     io.on('connect',function(socket) {
       console.log('client listening on socket.');
   });
@@ -273,4 +273,7 @@ function ma_fonc (inex,musicName){
 	 ma_fonc(++idex,musicName); // ou avec un return ma_fonc
 } */
 
-module.exports = router;
+module.exports = function(ios) {
+    io = ios;
+    return router;
+}
