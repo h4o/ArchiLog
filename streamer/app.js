@@ -15,10 +15,10 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var app = express();
-var server = http.Server(app);
-var io = require('socket.io').listen(server);
-
+var serverHttp = http.createServer(app);
+var io = require('socket.io').listen(serverHttp);
 var streamer = require('./routes/streamer')(io);
+
 
 
 
@@ -48,7 +48,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/streamer', streamer);
-
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
@@ -82,10 +81,17 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
-console.log('#############');
-console.log(io.on);
-module.exports.app = app;
-module.exports.toto = io;
+
+
+
+app.set('port', process.env.PORT || 3000);
+
+/*var server = app.listen(app.get('port'), function() {
+  console.log('Express server listening on port ' + server.address().port);
+});*/
+
+serverHttp.listen(process.env.PORT || 3000);
+
 
 //exports.io = io;
 

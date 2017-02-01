@@ -119,7 +119,7 @@ router.get('/', function(req, res) {
 router.get("/genre/:genre",function(req,res){
     console.log('#############');
     console.log(io);
-    io.on('connect',function(socket) {
+    io.on('connection',function(socket) {
       console.log('client listening on socket.');
   });
   //res.send("get genre "+req.params.genre);
