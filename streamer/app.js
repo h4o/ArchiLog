@@ -14,9 +14,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var streamer = require('./routes/streamer');
-
 var app = express();
+var server = http.Server(app);
+var io = require('socket.io').listen(server);
+
+var streamer = require('./routes/streamer')(io);
+
+
+
 app.use(function(request, response, next) {
   response.header("Access-Control-Allow-Origin", "*");
   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -77,5 +82,10 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
+console.log('#############');
+console.log(io.on);
+module.exports.app = app;
+module.exports.toto = io;
 
-module.exports = app;
+//exports.io = io;
+
