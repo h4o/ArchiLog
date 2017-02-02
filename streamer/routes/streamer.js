@@ -117,11 +117,13 @@ router.get('/', function(req, res) {
 });
 
 router.get("/genre/:genre",function(req,res){
-    console.log('#############');
-    console.log(io);
     io.on('connection',function(socket) {
-      console.log('client listening on socket.');
+      console.log('############################################## client listening on socket.');
   });
+
+    io.on('disconnet',function() {
+      console.log('////////////// client disconnect');
+    });
   //res.send("get genre "+req.params.genre);
       var play;
     //we only sucribe and bind to a channel when streaming
