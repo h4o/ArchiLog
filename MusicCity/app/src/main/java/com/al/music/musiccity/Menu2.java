@@ -264,7 +264,7 @@ public class Menu2 extends Fragment  {
                     try {
                         username = data.getString("username");
                         message = data.getString("message");
-
+                        Log.e("ssssss","fffff");
                         mPlayer.stop();
                         Toast.makeText(getContext(), "new music  ! !!", Toast.LENGTH_LONG).show();
                         mPlayer.start();

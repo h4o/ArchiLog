@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class Synchro {
     public int iteration;
-    public float position;
+    public int position;
     public float time;
     public Playlist playlist;
 }
