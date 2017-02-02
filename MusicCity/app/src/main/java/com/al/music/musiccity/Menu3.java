@@ -70,11 +70,6 @@ public class Menu3 extends Fragment  {
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 Musics music_t = restTemplate.getForObject(url, Musics.class);
 
-//****************schedule **************************//
-            //  Musics music_p = restTemplate.postForObject(urlPost,textEnvoyer, Musics.class);
-
-               // Boolean responseEntity = restTemplate.postForObject(url,"issam",Boolean.class);
-              //  Log.d("MainActivity",responseEntity+"");
                 Log.e("MainActivity",music_t+"");
                 return music_t;
             } catch (Exception e) {
@@ -146,13 +141,6 @@ public class Menu3 extends Fragment  {
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 String ret =  restTemplate.postForObject(urlPost,textEnvoyer, String.class);
                 Toast.makeText(getContext(),"Scheduled the track !",Toast.LENGTH_LONG).show();
-//****************schedule **************************//
-               // Toast.makeText(getContext(), textEnvoyer , Toast.LENGTH_LONG).show();
-             //     Musics music_p = restTemplate.postForObject(urlPost,textEnvoyer, Musics.class);
-
-                // Boolean responseEntity = restTemplate.postForObject(url,"issam",Boolean.class);
-                //  Log.d("MainActivity",responseEntity+"");
-              //  Log.e("MainActivity",music_t+"");
                 return null;
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
@@ -165,9 +153,6 @@ public class Menu3 extends Fragment  {
         @Override
         protected void onPostExecute(Musics music_t) {
 
-
-
-           // Toast.makeText(getContext(),"music schedule  " , Toast.LENGTH_LONG).show();
             Toast.makeText(getContext(), textEnvoyer +"est schedule" , Toast.LENGTH_LONG).show();
 
 
@@ -203,21 +188,12 @@ public class Menu3 extends Fragment  {
         adapter = new ArrayAdapter<Music>(getContext(), android.R.layout.simple_list_item_1, music);
         lv.setAdapter(adapter);
 
-       // sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
         scheduleMusic = (Button) view.findViewById(R.id.scheduleMusic);
         scheduleMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-
-
-                /*EditText t = (EditText) getView().findViewById(R.id.m);
-                String textEnvoyer = t.getText().toString();
-                // do something
-                Toast.makeText(getContext(), textEnvoyer, Toast.LENGTH_LONG).show();*/
-               // Toast.makeText(getContext(),"cliquer", Toast.LENGTH_LONG).show();
-
-
 
                 new HttpRequestTask2().execute();
 
@@ -225,16 +201,6 @@ public class Menu3 extends Fragment  {
             }
         });
 
-       /* lv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                // do something
-                Toast.makeText(getContext(), "t as cliqué!", Toast.LENGTH_LONG).show();
-                // music.add("issam");
-
-            }
-        });*/
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0,
@@ -257,15 +223,9 @@ public class Menu3 extends Fragment  {
             @Override
             public boolean onQueryTextSubmit(String text) {
                 // TODO Auto-generated method stub
-                // Toast.makeText(getContext(), "je l'ai!", Toast.LENGTH_LONG).show();
-
-               // a=text;
-
-               // Toast.makeText(getContext(), a + " is a good choice " , Toast.LENGTH_LONG).show();
-              //  GenreText.setText(a);
                 a=text;
 
-                Toast.makeText(getContext(), a + " will be shedule" , Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), a + " will be schedule" , Toast.LENGTH_LONG).show();
                 GenreText.setText(a);
                 textEnvoyer = GenreText.getText().toString();
 
