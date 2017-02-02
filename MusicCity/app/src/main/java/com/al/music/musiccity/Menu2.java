@@ -20,6 +20,11 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pusher.client.Pusher;
+import com.pusher.client.PusherOptions;
+import com.pusher.client.channel.Channel;
+import com.pusher.client.channel.SubscriptionEventListener;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -30,9 +35,13 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.nkzawa.emitter.Emitter;
-import com.github.nkzawa.socketio.client.IO;
-import com.github.nkzawa.socketio.client.Socket;
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
+
+//import com.github.nkzawa.emitter.Emitter;
+//import com.github.nkzawa.socketio.client.IO;
+//import com.github.nkzawa.socketio.client.Socket;
 
 
 /**
@@ -43,6 +52,7 @@ public class Menu2 extends Fragment  {
     String a ;
     ListView lv;
     SearchView sv;
+    Pusher pusher;
    // String[] teams = {"Pop", "Metal", "Rock", "Rap", "Rai", "Ragga", "Reggae", "Hip-Hop"};
    public List<String> teams = new ArrayList<String>();
     ArrayAdapter<String> adapter;
@@ -51,6 +61,8 @@ public class Menu2 extends Fragment  {
     static MediaPlayer mPlayer;
     Button buttonPlay;
     Button buttonStop;
+
+    private String playedResource;
 
     String urlRecuperer;
 
@@ -166,7 +178,14 @@ public class Menu2 extends Fragment  {
         buttonPlay.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                mSocket.on("synchronize", onNewMessage);
+                Log.e("Socket","Connecting");
+                mSocket.connect();
+                mSocket.emit("test","test2");
+                Log.e("Listeners:",mSocket.listeners("synchronize").toString());
                 Toast.makeText(getContext(), "Playing sound", Toast.LENGTH_SHORT).show();
+
+
                 if (mPlayer == null)
                     mPlayer = new MediaPlayer();
                 if (mPlayer.isPlaying()) {
@@ -174,10 +193,18 @@ public class Menu2 extends Fragment  {
                     mPlayer.reset();
                     //mPlayer = new MediaPlayer();
                 }
+                mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mPlayer.stop();
+                        mPlayer.start();
+                    }
+                });
                 mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
                 try {
                     mPlayer.setDataSource("http://46.101.31.80/streamer/genre/"+a.toUpperCase());
+                    playedResource = "http://46.101.31.80/streamer/genre/"+a.toUpperCase();
                 } catch (IllegalArgumentException e) {
                     Toast.makeText(getContext(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
                 } catch (SecurityException e) {
@@ -214,13 +241,14 @@ public class Menu2 extends Fragment  {
     }
     public void onDestroy() {
         super.onDestroy();
-        // TODO Auto-generated method stub
         if (mPlayer != null) {
             mPlayer.release();
             mPlayer = null;
         }
+        Log.e("Socket","disconnecting from socket");
         mSocket.disconnect();
-        mSocket.off("new message", onNewMessage);
+        mSocket.off("synchroniza", onNewMessage);
+        mSocket.close();
     }
     public void onResume() {
         super.onResume();
@@ -234,20 +262,48 @@ public class Menu2 extends Fragment  {
 
     private Socket mSocket;
     {
-        try {
-            mSocket = IO.socket("http://46.101.31.80/");
-        } catch (URISyntaxException e) {
-            Toast.makeText(getContext(), "erreur 1", Toast.LENGTH_LONG).show();
-        }
+
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            mSocket = IO.socket("http://46.101.31.80");
+        } catch (URISyntaxException e) {
+            Toast.makeText(getContext(), "erreur 1", Toast.LENGTH_LONG).show();
+        }
+        PusherOptions options = new PusherOptions();
+        options.setCluster("eu");
+
+        Log.e("Pusher","connection");
+        pusher = new Pusher("3e482bab59f985e9b9d7",options);
+        pusher.connect();
+
+        Channel channel = pusher.subscribe("my-channel");
+        Log.e("Pusher",channel.isSubscribed()+"");
+        channel.bind("my-event", new SubscriptionEventListener() {
+            @Override
+            public void onEvent(String channelName, String eventName, final String data) {
+                if (mPlayer.isPlaying()) {
+                    Log.e("Player", "Resetting the player");
+                    mPlayer.stop();
+                    mPlayer.reset();
+                    // Toast.makeText(getContext(), "new music  ! !!", Toast.LENGTH_LONG).show();
+                    try {
+                        Log.e("Player", "Resource" + playedResource);
+                        mPlayer.setDataSource(playedResource);
+
+                        mPlayer.prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    mPlayer.start();
+                }
+            }
+        });
 
 
-        mSocket.on("sychronize", onNewMessage);
-        mSocket.connect();
     }
 
     private Emitter.Listener onNewMessage = new Emitter.Listener() {
@@ -255,6 +311,7 @@ public class Menu2 extends Fragment  {
 
         @Override
         public void call(final Object... args) {
+            Log.e("Socket","test");
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
