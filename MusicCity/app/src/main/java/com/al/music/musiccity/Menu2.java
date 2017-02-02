@@ -95,24 +95,12 @@ public class Menu2 extends Fragment  {
 
         @Override
         protected void onPostExecute(Genre genre) {
-            // TextView greetingContentText = (TextView) findViewById(R.id.content_value3);
 
             Log.e("MainActivity est bien ",genre.getGenres().toString());
             teams=genre.getGenres();
             Toast.makeText(getContext(),"List of kind found and added " , Toast.LENGTH_LONG).show();
             adapter.clear();
             adapter.addAll(teams);
-            //  test=greeting.getContent();
-
-            // Toast.makeText(getContext(),greeting.getGenres().toString() + "récuperé ! " , Toast.LENGTH_LONG).show();
-
-            //  TextView greetingContentText = (TextView) getView().findViewById(R.id.content_value3);
-            //  greetingContentText.setText(test);
-
-           // teams=greeting.getGenres();
-          //  Toast.makeText(getContext(),teams.toString() + "récuperé dans teams ! " , Toast.LENGTH_LONG).show();
-
-
 
         }
 
@@ -170,8 +158,6 @@ public class Menu2 extends Fragment  {
                 return false;
             }
         });
-       // urlRecuperer = "http://al-music-streamer.herokuapp.com/streamer/genre/"+a ;
-       // urlRecuperer ="http://al-music-streamer.herokuapp.com/streamer/genre/"+a;
 
 
         buttonPlay = (Button) view.findViewById(R.id.play2);
