@@ -96,6 +96,12 @@ serverHttp.listen(process.env.PORT || 3000);
       console.log('############################################## client listening on socket.');
   });
 
+
+    io.on('test',function(data) {
+        console.log('test event revceived //////////');
+    })
+
+
     io.on('disconnet',function() {
       console.log('////////////// client disconnect');
     });
