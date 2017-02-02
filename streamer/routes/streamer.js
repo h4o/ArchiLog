@@ -246,7 +246,6 @@ function stream_music(play,position,time,res) {
 
 function extractPort(ServiceName){
 	const appInfo = client.getInstancesByAppId(ServiceName);
-	console.log(appInfo)
 	return {  port:appInfo[0].port['$'], hostname:appInfo[0].hostName }
 
 }
