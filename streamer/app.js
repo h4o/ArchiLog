@@ -92,6 +92,13 @@ app.set('port', process.env.PORT || 3000);
 
 serverHttp.listen(process.env.PORT || 3000);
 
+    io.on('connection',function(socket) {
+      console.log('############################################## client listening on socket.');
+  });
+
+    io.on('disconnet',function() {
+      console.log('////////////// client disconnect');
+    });
 
 //exports.io = io;
 

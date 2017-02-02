@@ -116,13 +116,7 @@ router.get('/', function(req, res) {
 
 });
 
-    io.on('connection',function(socket) {
-      console.log('############################################## client listening on socket.');
-  });
 
-    io.on('disconnet',function() {
-      console.log('////////////// client disconnect');
-    });
 
 router.get("/genre/:genre",function(req,res){
 
