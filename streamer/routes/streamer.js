@@ -63,8 +63,9 @@ router.get('/', function(req, res) {
           if (!err && resp.statusCode == 200) {
               var parsed_body = JSON.parse(body);
               play = parsed_body.playlist;
-                  io.emit('synchronize',{ status : "ok"});
-              console.log(play);
+                  io.emit('synchronize',{ status : "ok"},function(d) {
+                      console.log('received echo: ' + d)
+                      });
           }
       });
     });
