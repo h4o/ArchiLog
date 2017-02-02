@@ -226,7 +226,7 @@ function stream_music(play,position,time,res) {
                   if(position >= play.songs.length)
                     position = 0;
                   console.log(play.songs[position].id);
-                  var filePath = path.join(__dirname,'data/music/' + play.songs[position].id+'.mp3');
+                  var filePath = path.join(__dirname,'../data/music/' + play.songs[position].id+'.mp3');
                   var stat = fileSystem.statSync(filePath);
 
                   
